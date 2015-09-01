@@ -87,8 +87,8 @@
 	$( document ).on("tapend","a.icon-back", function(){
 		
 				
-			$('header .icon-back').css("color", "#FFFFFF" );
-			$('header .icon-menu').css("color", "#FFFFFF" );
+			$('header .icon-back').css("color", "#0077C0" );
+			$('header .icon-menu').css("color", "#0077C0" );
 		
 		if(!$.isEmptyObject(rulesChanges)){
 				showAlert($.t("Rule Changed"), $.t("Do you want to save changes?") , function(){

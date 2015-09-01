@@ -160,6 +160,7 @@ function counterByMsg(){
 			$.post('http://'+IP+':8089/appriz/setMessageStatus', {"idSecretClient": idScretClient, msgStatus:report }, function(data){
 				//console.log(JSON.stringify(data));
 			});
+			
 }		
 	
 function syncronizeOffLineMsg(){
@@ -517,7 +518,7 @@ $('#categories').html("<div class='MsG'></div>");
 						
 						$.jStorage.set('msg_div', btoa($('#categories').html()));
 						}catch(e){
-							console.error(e);
+							console.log(e);
 						}
 						//console.log(JSON.stringify(data));
 					}
