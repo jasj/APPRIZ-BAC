@@ -33,8 +33,8 @@ showInfoD($.t("Offline Mode"),$.t("This option is disabled in Offline Mode"),fun
 
 
 $( document ).on("tapend","[products]",function(){
-				$('header .icon-back').css("color", "#ED1A2D" );
-			$('header .icon-menu').css("color", "#ED1A2D" );
+	$('header .icon-back').css("color", "#0077C0" );
+			$('header .icon-menu').css("color", "#0077C0" );
 	getProducts($(this).attr("products"));
 });
 
