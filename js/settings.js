@@ -55,13 +55,13 @@ $('#passwordChg .btnFull').tapend(function(){
 		if($('#passwordChg input[type="password"]').eq(0).val() != $('#passwordChg input[type="password"]').eq(1).val()){
 	showInfoD($.t('Wrong data'),$.t('Passwords do not match'),function(){$('.moldHide, .dialogAlert').hide();});} else{
 		var encryPass= HexWhirlpool($('#passwordChg input[type="password"]').eq(0).val());
-		$.post('http://'+IP+':8089/appriz/setAprzCustomerSettings',{
+	/*	$.post('http://'+IP+':8089/appriz/setAprzCustomerSettings',{
 		idSecretClient		:  idScretClient,
 		password   			: encryPass
 	}, function(data){
 		showInfoD($.t('Change password'),$.t('The password was changed!'),function(){$('.moldHide, .dialogAlert').hide(); });
 			$('[page-content=settingsPage]').trigger('tapend');
-	});
+	});*/
 	
 	}
 	}else{
@@ -76,13 +76,13 @@ $('#passwordChg .btnFull').tapend(function(){
 $('#pinChg .btnFull').tapend(function(){
 	var patt = /^\d{4}$/;
 	if( patt.test($('#pinChg input[type="tel"]').eq(0).val())){
-			$.post('http://'+IP+':8089/appriz/setAprzCustomerSettings',{
+		/*	$.post('http://'+IP+':8089/appriz/setAprzCustomerSettings',{
 		idSecretClient			:  idScretClient,
 		pin   			: $('#pinChg input[type="tel"]').eq(0).val()
 	}, function(data){
 		showInfoD($.t('Change pin'),$.t('The pin was changed!'),function(){$('.moldHide, .dialogAlert').hide(); pin = $('#pinChg input[type="tel"]').eq(0).val()});
 		$('[page-content=settingsPage]').trigger('tapend');
-	});
+	});*/
 	}else{
 		showInfoD($.t('Wrong PIN'),$.t('PIN must be of fourth digits'),function(){$('.moldHide, .dialogAlert').hide();});
 		$('#pinChg input[type="tel"]').eq(0).val("");

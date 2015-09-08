@@ -3,7 +3,7 @@ function getAds(){
 		{img : "banner-burger-kingdom.jpg", url: "http://apprizmobile.com/html/matias"},
 		{img : "banner-carro.jpg" , url: "http://apprizmobile.com/html/maximo-smartbank/"}	,
 		{img : "banner-escuela.jpg" , url: "http://apprizmobile.com/html/maximo-tarjeta/"},
-		{img : "banner-tarjeta.jpg" , url: "http://apprizmobile.com/html/maximo-tarjeta/"}
+		{img : "banner-tarjeta.jpg" , url: "http://www.smartsoftint.com"}
 	];
 	var imgSelected = Math.floor(Math.random() * (imgDemoSource.length));
 	$("#ads").html('<img src="ads/'+imgDemoSource[imgSelected].img +'" alt=""/>');

@@ -129,7 +129,7 @@ function counterByMsg(){
 	}
 	
 	function reportMsgState(){
-			report ={};
+		/*	report ={};
 			$('.Message').each(function( index ) {
 				var readed = $(this).hasClass("deleted") ? "readedDeleted" : "readed";
 				var unread = $(this).hasClass("deleted") ? "unreadDeleted" : "unread"; 
@@ -160,6 +160,7 @@ function counterByMsg(){
 			$.post('http://'+IP+':8089/appriz/setMessageStatus', {"idSecretClient": idScretClient, msgStatus:report }, function(data){
 				//console.log(JSON.stringify(data));
 			});
+		*/
 			
 }		
 	
