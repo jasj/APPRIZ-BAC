@@ -6,7 +6,7 @@ function getAds(){
 		{img : "banner-tarjeta.jpg" , url: "http://www.smartsoftint.com"}
 	];
 	var imgSelected = Math.floor(Math.random() * (imgDemoSource.length));
-	$("#ads").html('<img src="ads/'+imgDemoSource[imgSelected].img +'" alt=""/>');
+	$("#ads").html('<img src="Ads/'+imgDemoSource[imgSelected].img +'" alt=""/>');
 	$("#ads img").tapend(function(){
 		window.open(imgDemoSource[imgSelected].url,"_blank");
 	});
