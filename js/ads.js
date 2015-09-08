@@ -7,9 +7,7 @@ function getAds(){
 	];
 	var imgSelected = Math.floor(Math.random() * (imgDemoSource.length));
 	$("#ads").html('<img src="Ads/'+imgDemoSource[imgSelected].img +'" alt=""/>');
-	$("#ads img").tapend(function(){
-		window.open(imgDemoSource[imgSelected].url,"_blank");
-	});
+	$("#ads img").attr("urlLink", imgDemoSource[imgSelected].url);
 	swipeDelete();
 	/*
 	$.post('http://'+IP+':8089/appriz/getAdsByClient',{"idSecretClient" : idScretClient,"entityId" : parseInt(currentEntityID)},function(data){
@@ -28,11 +26,20 @@ function swipeDelete(){
 		{
 				//Generic swipe handler for all directions
 				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-					if(direction=='left'){
+					if(distance < 15){
+						
+					}
+					else if(direction=='left'){
 						$(this).animate({opacity: 0,"margin-left": "-300px"},1000, function(){$(this).remove();});
 					}else if ( direction=='right' ){
 						$(this).animate({opacity: 0,"margin-left": "300px"},1000, function(){$(this).remove();});
 					}
+					
+				},
+				swipeStatus:function(event, phase, direction, distance , duration , fingerCount) {
+					 if((phase === $.fn.swipe.phases.PHASE_END || phase === $.fn.swipe.phases.PHASE_CANCEL )& distance < 15)  {
+						window.open($("#ads img").attr("urlLink"),"_blank");
+					 }
 				}
 		});
 	
