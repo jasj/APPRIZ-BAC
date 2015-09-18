@@ -40,6 +40,7 @@ function showInfoD(title,text,okFx){
 	$( document ).on('click','.okBtn',function(){
 		$('#modal1Btn').hide();
 		okFx();
+		$( document ).off('click','.okBtn');
 	});
 
 }
@@ -53,13 +54,21 @@ function showAlert(title,text,yesFn,noFn){
 	$( document ).on('click','.yesBtn',function(){
 		$('#modal2Btn').hide();
 		yesFn();
+		$( document ).off('click','.yesBtn');
+
 	});
 	$( document ).on('click','.noBtn',function(){
 		$('#modal2Btn').hide();
 		noFn();
+		$( document ).off('click','.noBtn');
 	});
 }
 
 $.fn.hasAttr = function(name) {  
 	return this.attr(name) !== undefined;
 };
+
+
+//generics variables
+modeDeleteMenu = false;
+loadingPage = false;
