@@ -347,7 +347,7 @@ function makeSwipe(id){
 				 }else if(  duration >  1000& distance < 15 ){
 					 
 					 var msg =  $(this);
-					 msg.toggleClass("selectedMSG");
+					 msg.addClass("selectedMSG");
 					 var msgSel = $(".selectedMSG").length;
 					 if(msgSel > 0){
 						  $("#selNum cnt").html(msgSel);
@@ -415,6 +415,7 @@ function makeSwipe(id){
 				
 //bring message for this client
 		function callNewMSG(){
+			alert(1);
 		 $('#menuDelBack').trigger('tapend'); //si esta en el menu delete sale de el.
 		
 			
@@ -790,6 +791,6 @@ StartXCategories = 0;
 			
 
 
-
+callNewMSG();
 
 
