@@ -415,7 +415,6 @@ function makeSwipe(id){
 				
 //bring message for this client
 		function callNewMSG(){
-			alert(1);
 		 $('#menuDelBack').trigger('tapend'); //si esta en el menu delete sale de el.
 		
 			
@@ -787,10 +786,5 @@ StartXCategories = 0;
 		$('.multiselectNav').hide();
 		$('.filtersNav').show();
 	})
-	
-			
-
-
-callNewMSG();
 
 
