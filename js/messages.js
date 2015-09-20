@@ -721,6 +721,7 @@ function makeSwipe(id){
 		
 			$("*").scrollTop(0);
 			 myScroll3 = new IScroll('#wrapper_message', { useTransition: true });
+			  myScroll3.refresh();
 		});
 		
 		$( document ).on("taphold",'nav.categoryNav li',function(){
