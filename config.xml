@@ -1,8 +1,8 @@
 <?xml version='1.7' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-	<name>APPRIZ BCR</name>
+<widget id="com.appriz.InfiniteScroll" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>InfiniteScroll</name>
     <description>
-       Alpha version of BCR
+       Alpha version of InfiniteScroll
     </description>
     <author email="asegreda@smartsoftint.com" href="http://smartsoftint.com">
         Appriz Team
