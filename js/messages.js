@@ -96,7 +96,8 @@ function current_inbox(){
 	$('.Message').hide();
 	$('.gotcolors').animate({opacity: 1}, 200);
 	$('.entity'+currentEntityID).show();
-	$('nav.categoryNav li').find("span").css("color") == tabSelectedColor;	
+	//$('nav.categoryNav li').find("span").css("color") == tabSelectedColor;	
+	
 
 	$(".page-content.active").removeClass("active");
 	$("header.active").removeClass("active");
@@ -106,7 +107,7 @@ function current_inbox(){
 	
 	$('#menuAppriz').fadeOut(300);
 	$('.allMenu').css({"right" : "-80%"});
-	$('.navAppriz li').eq(0).trigger("tapend");
+   $('.navAppriz li').eq(0).trigger("tapend");
 	
 	checkWithOutEntity();
 	if(currentEntityID>0)
@@ -415,6 +416,8 @@ function makeSwipe(id){
 				
 //bring message for this client
 		function callNewMSG(){
+		 $('.multiselectNav').hide();
+		 $('.filtersNav').show();
 		 $('#menuDelBack').trigger('tapend'); //si esta en el menu delete sale de el.
 		
 			
@@ -551,7 +554,10 @@ function makeSwipe(id){
 				$.jStorage.set('msg', btoa($('#categories').html()));
 				console.timeEnd("MSGProcFull");
 			
-				$("nav.categoryNav li span").addClass("active");
+				//$("nav.categoryNav li span").addClass("active");
+				$("nav.categoryNav li[typemsg] span").not(".active").each(function(index){
+					 $(".typemsg"+$(this).parent().parent().attr("typemsg")).hide();
+				});
 				setTimeout(function(){oneTimeSendAjax = true;},500);
 				
 			
@@ -701,7 +707,7 @@ function makeSwipe(id){
 			
 				
 		//Filter handle
-		$( document ).on("tapend",'nav.categoryNav li',function(){
+		$( document ).on("tapend",'nav.categoryNav .filtersNav li',function(){
 		
 			if( $(this).find("span").hasClass("active")){
 				$(this).find("span").removeClass("active");

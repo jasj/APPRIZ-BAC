@@ -65,6 +65,7 @@
 					
 			$('header .icon-back').css("color", "white" )
 			$('header .icon-menu').css("color", "white" )
+			$('header .icon-menu').css("color", "white" )
 					if(pinPolicy==1 ){
 					
 					$('#pin').show();
@@ -106,7 +107,7 @@
 		}
 		
 		if(scrollPosition!=0){
-		myScroll3.scrollTo(0,scrollPosition);
+		//myScroll3.scrollTo(0,scrollPosition);
 				}
 				
 		if(inBack == "settingsPage" ){	
