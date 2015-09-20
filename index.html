@@ -110,22 +110,25 @@
         </nav>
         <!--close navAppriz-->
         <div id="mainOptions" class="contentMenu">
-            <ul>
-                <li>
-                    <button page-content="products" products="rules"><span class="icon1 icon-myAlerts"><span class="path1"></span><span
-                            class="path2"></span></span><text i18Trans="My Alerts"/>
-                    </button>
-                </li>
-                <li>
-                    <button page-content="products" products="services"><span class="icon1 icon-services"></span><text i18Trans="Services"/></button>
-                </li>
-                <li style="display : none">
-                    <button  page-content="products"><span class="icon1 icon-pushcenter"></span><text i18Trans="Push Center"/></button>
-                </li>
-                <li>
-                    <button page-content="demo"><span class="icon1 icon-demo"></span><text i18Trans="Demo"/></button>
-                </li>
-            </ul>
+          
+				<ul>
+					<li>
+						<button page-content="products" products="rules"><span class="icon1 icon-myAlerts"><span class="path1"></span><span
+								class="path2"></span></span><text i18Trans="My Alerts"/>
+						</button>
+					</li>
+					<li>
+						<button page-content="products" products="services"><span class="icon1 icon-services"></span><text i18Trans="Services"/></button>
+					</li>
+					<li style="display : none">
+						<button  page-content="products"><span class="icon1 icon-pushcenter"></span><text i18Trans="Push Center"/></button>
+					</li>
+					<li>
+						<button page-content="demo"><span class="icon1 icon-demo"></span><text i18Trans="Demo"/></button>
+					</li>
+				</ul>
+	
+			
         </div>
 <!--close content menu-->
 
@@ -216,7 +219,7 @@
 			</div>
 			<div id="deleteAllBtn" i18Trans="Delete All"></div>
 			<nav class="categoryNav">
-			
+			<div class="filtersNav">
 				<ul>
 					<li typemsg='1'>
 						<div class="bubble"></div>
@@ -235,6 +238,16 @@
 						<div class="bubble"></div>
 						<a ><span class="icon-services active"></span></a></li>
 				</ul>
+			</div>
+			<div class="multiselectNav">
+				<ul>
+					<li id="selNum"><i class='icon-back'></i>&nbsp;<cnt>0<cnt></li>
+					<li><i class="active fa fa-eye"></i></li>
+					<li><i class="active fa fa-eye-slash"></i></li>
+					<li><i class="active fa fa-trash-o"></i></li>
+					<li><i class="active fa fa-ellipsis-v"></i></li>
+				</ul>
+			</div>
 				<div id='colorHandle'>colorHandle</div>
 			</nav>
 

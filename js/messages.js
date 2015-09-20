@@ -68,15 +68,11 @@ function loadOldMessages(old){
 			},'json') .fail(function(e) {
 					$('.refreshing_list').css({"background-color" : "#888"}).html('Conexion error!').fadeOut(3000,function(){$('.refreshing_list').css({"background-color" : "#F5F5Ff"}).html('Refreshing list');});
 			}).done(function(){ 
-			//	current_inbox();
-			//	counterByMsg();
+			
 				makeSwipe();
 				fix_messages();
 				$.jStorage.set('msg', btoa($('#categories').html()));
-			//	$('.refreshing_list').fadeOut(1000); 	
-			//	$("nav.categoryNav li span").addClass("active");
-			//	setTimeout(function(){oneTimeSendAjax = true;},500);
-			//	checkWithOutEntity();
+			
 				endLoad();		
 			 myScroll3.refresh();
 			});
@@ -143,12 +139,8 @@ function current_inbox_off(){
 		
 }
 
-
-function counterByMsg(){
-
-	//pullDownEl = $('#pullDown');
-	
-	   myScroll3 = new IScroll('#wrapper_message', {
+function makeItScroll(){
+	  myScroll3 = new IScroll('#wrapper_message', {
 		   probeType: 1, 
 		   mouseWheel: false,
 		   deceleration:0.0002,
@@ -168,8 +160,6 @@ function counterByMsg(){
 		   }
 		  
 		   });
-		   
-		   
 		   
 	   myScroll3.on('scroll', function(){
 		var onDemo = false;
@@ -194,26 +184,21 @@ function counterByMsg(){
 		   if (this.y < (this.maxScrollY + 40) && !loadingPage){
 			   console.log("sdsdsd"+loadingPage);
 			    loadingPage = true;
-			//	$('.MsG').lastChild.getClass();
 				var idLastMessage = $(".MsG li:last-child").attr('id');
-				$('#categories').append('<div id="spinBotton"><i id="spinBotton" class="fa fa-spinner fa-spin"></i></div>');
+				$('#categories').append('<div id="spinBotton"> '+$.t("Bringing old messages")+' <i id="spinBotton" class="fa fa-spinner fa-spin"></i></div>');
 				loadOldMessages(idLastMessage);
 				console.log("ultimo mensaje "+idLastMessage);
 				
 				}
 }); 
-	
-		
-
-		
-		
-		
-		
-		
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-		
-		
- 
+}
+
+function counterByMsg(){
+
+	//pullDownEl = $('#pullDown');
+	
+	
 	
 				
 		$('.bubble').eq(0).html( $('.typemsg1.unread.entity'+currentEntityID).length == 0 ? "" : $('.typemsg1.unread.entity'+currentEntityID).length).css($('.typemsg1.unread.entity'+currentEntityID).length == 0 ? {"display" : "none" } : {"display" : "block"});
@@ -222,44 +207,7 @@ function counterByMsg(){
 		$('.bubble').eq(3).html( $('.typemsg4.unread.entity'+currentEntityID).length == 0 ? "" : $('.typemsg4.unread.entity'+currentEntityID).length).css($('.typemsg4.unread.entity'+currentEntityID).length == 0 ? {"display" : "none" } : {"display" : "block"});
 		$('.bubble').eq(4).html( $('.typemsg5.unread.entity'+currentEntityID).length == 0 ? "" : $('.typemsg5.unread.entity'+currentEntityID).length).css($('.typemsg5.unread.entity'+currentEntityID).length == 0 ? {"display" : "none" } : {"display" : "block"}); 
 		
-//	$('#leftMenu li').eq(0).find('div div').html($('.unread.entity'+currentEntityID).length);
-		//$('#leftMenu li').eq(4).find('div div').html($('.unread').length);
-			
-/*
- 	var arregloBubble=[];
-	$.post('http://'+IP+':8089/appriz/getCountMessageByType_',{"idSecretClient": idScretClient, "entity":$.jStorage.get('currentEntityID')},function(data){
-		
-		
-				//Id tipo Mensaje 1  ->  Icono 2  -> Alerta
-				//Id tipo Mensaje 2  ->  Icono 3  -> Notificacion (this-request.length)
-				//Id tipo Mensaje 3  ->  Icono 4  -> Publicidad
-				//Id tipo Mensaje 4  ->  Icono 1  -> Mis Alertas
-				//Id tipo Mensaje 5  ->  Icono 5  -> Request
-		
-		
- 		$.each(data['data'],function(index, item){
-	
-				arregloBubble[item['idTipoMensaje']] = item['count'];
-				
-		});
-				
-			},'json') .fail(function(e) {
-			}).done(function(){ 
-		
-			
-		$('.bubble').eq(0).html(typeof arregloBubble[4] == 'undefined' ? "" : arregloBubble[4]);
-		$('.bubble').eq(1).html(typeof arregloBubble[1] == 'undefined' ? "" : arregloBubble[1]);	
-		$('.bubble').eq(2).html(typeof arregloBubble[2] == 'undefined' ? "" : arregloBubble[5] == 'undefined' ? arregloBubble[2] :arregloBubble[2]-arregloBubble[5]);
-		$('.bubble').eq(3).html(typeof arregloBubble[3] == 'undefined' ? "" : arregloBubble[3]);
-		$('.bubble').eq(4).html(typeof arregloBubble[5] == 'undefined' ? "" : arregloBubble[5]);
-		
 
-		
-			});  */
-			
-		//end new count bubble method
-		
-		
 		
 		$("#entities li").each(function(index, entityI ){
 			var bn = $(this).find('.bubble2')
@@ -329,8 +277,9 @@ function syncronizeOffLineMsg(){
 }
 		
 function makeSwipe(id){
-		
-			$( 1 ? ".Message" : "#"+id+".message").swipe( {
+	var objTarget = id == undefined ? ".Message" : "#"+id+".message";
+		$(objTarget).swipe("destroy");
+			$( objTarget).swipe( {
 				
 				//Generic swipe handler for all directions
 				swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -342,15 +291,7 @@ function makeSwipe(id){
 							mContainer.css({"margin-left" : "-150px"}); //show delete button
 							mContainer.addClass("deleteOptionActivate");
 							
-													/*Demo App*/
-							if(onDemo && $('#demo13').css("visibility") == "visible")
-							{
-							//	$('#demo13 .NextBtn').css('visibility','visible');
-								$('#demo14 .NextBtn').trigger('tapend');
-											$('#demo13 .NextBtn').css('visibility','hidden');
-							$('#demo13').css("visibility","hidden");
-							}
-						   /*Demo App*/
+							
 							
 							$("#deleteAllBtn").show();
 					}else if(direction=='left' & distance < (150) & actualMargin < 0){
@@ -361,14 +302,7 @@ function makeSwipe(id){
 							mContainer.animate({"margin-left" : window.innerWidth+"px"});
 							mContainer.addClass("detailOptionActivate");
 							
-										/*Demo App*/
-							if(onDemo && $('#demo12').css("visibility") == "visible")
-							{
-								//$('#demo12 .NextBtn').css('visibility','visible');
-								$('#demo12 .NextBtn').trigger('tapend');
-								
-							}
-						   /*Demo App*/
+					
 						
 					}else if(direction=='right'  & actualMargin >-150){
 							mContainer.animate({"margin-left" : "0px"}).removeClass("deleteOptionActivate").removeClass("detailOptionActivate"); ;
@@ -385,30 +319,52 @@ function makeSwipe(id){
 				
 				swipeStatus:function(event, phase, direction, distance , duration , fingerCount) {
 				 	
-				/* 
-					if(phase === $.fn.swipe.phases.PHASE_START && !modeDeleteMenu) {
-						
-							$(this).find('.centralLI').css({'background-color':'#E7E7FF'});
-					}  
-						if((phase === $.fn.swipe.phases.PHASE_END || phase === $.fn.swipe.phases.PHASE_CANCEL && !modeDeleteMenu ) ) {
-						
-						
-						
-						if(duration>1600){
-									modeDeleteMenu = true;
-									$('#MenuFilter').css({'display':'none'});
-									$('#MenuDelete').css({'display':'block'});
-						}
-					}   */
-					
+			
 				 
-				 if((phase === $.fn.swipe.phases.PHASE_END || phase === $.fn.swipe.phases.PHASE_CANCEL )& distance < 15)  {
+				 if((phase === $.fn.swipe.phases.PHASE_END || phase === $.fn.swipe.phases.PHASE_CANCEL )& distance < 15 && duration < 1000)  {
+					 
+					 if($('.multiselectNav').is(":visible")){
+						 var msg =  $(this);
+						 msg.toggleClass("selectedMSG");
+						 var msgSel = $(".selectedMSG").length;
+						 if(msgSel > 0){
+							  $("#selNum cnt").html(msgSel);
+							  $('.filtersNav').hide();
+							  $('.multiselectNav').show();
+						 }else{
+							 $('.multiselectNav').hide();
+							 $('.filtersNav').show();
+						 }
+					 }else{
 						showMessage($(this).attr("id"));
 						if(!modeDeleteMenu){
-						$.jStorage.set('msg', btoa($('#categories').html()));
-						stateChangeLst.push({msg : $(this).parent().parent().parent().attr("id") , state : "READED"});
+							$.jStorage.set('msg', btoa($('#categories').html()));
+							stateChangeLst.push({msg : $(this).parent().parent().parent().attr("id") , state : "READED"});
 						}
-				 }else{
+					 }
+						
+					
+				 }else if(  duration >  1000& distance < 15 ){
+					 
+					 var msg =  $(this);
+					 msg.toggleClass("selectedMSG");
+					 var msgSel = $(".selectedMSG").length;
+					 if(msgSel > 0){
+						  $("#selNum cnt").html(msgSel);
+						  $('.filtersNav').hide();
+						  $('.multiselectNav').show();
+					 }else{
+						 $('.multiselectNav').hide();
+						 $('.filtersNav').show();
+					 }
+					
+					 
+					 
+				 }else if(distance < 15 && duration < 1000){
+					 console.log(duration);
+				 }
+				 
+				 else{
 					var msg = $(this).find(".moveContainer");
 					var actualMargin = parseInt(msg.css("margin-left").replace(/[^-\d\.]/g, '') );
 					
@@ -469,19 +425,17 @@ function makeSwipe(id){
 			if(oneTimeSendAjax){
 			oneTimeSendAjax = false;
 			console.time("MSGProcFull");
-				//	$('.pullDownIcon').
-				//	$('.pullDownLabel').toggleClass('fa fa-spinner fa-spin fa-3x',true);
-				//	$('.pullDownLabel').html($.t("Loading . . . "));
+			
 			
 			
 				console.time("PostReq");
-		//	$.post('http://'+IP+':8089/appriz/getMessagesByClient',{"idSecretClient": idScretClient},function(data){
+		
 			$.post('http://'+IP+':8089/appriz/getIndexedMsg_',{"idSecretClient": idScretClient},function(data){
 			
 			console.timeEnd("PostReq");
 			console.time("MSGProc");
 			$('#categories').html("<div class='MsG'></div>");
-				//console.log(JSON.stringify(data));
+			
 				
 				$.each(data,function(index, message){
 					if($('#'+message['idMessage']).length > 0){ 
@@ -587,33 +541,23 @@ function makeSwipe(id){
 		
 		
 				current_inbox();
+				makeItScroll();
 				counterByMsg();
+				
 				makeSwipe();
 				fix_messages();
 			
 				
 				$.jStorage.set('msg', btoa($('#categories').html()));
 				console.timeEnd("MSGProcFull");
-				//scr=0;
-
-				/*
-				$('.refreshing_list').fadeOut(1000); 
-				$('.pullDown').css('margin-top', '0px');
-				$('.pullDownLabel').toggleClass('fa fa-spinner fa-spin fa-3x',false);
-				$('.pullDownLabel').html($.t("Pull to refresh"));
-				*/
-			/*  
-			 $('#wrapper_message').css('margin-top', '69px');
-			 $('.pullDown').html('Pull down to refresh'); */
-			//	$("*").scrollTop(2);
+			
 				$("nav.categoryNav li span").addClass("active");
 				setTimeout(function(){oneTimeSendAjax = true;},500);
 				
 			
 				
 							
-		//	counterByMsg();$('.refreshing_list').hide(); 
-
+	
 			});
 				
 		}
@@ -621,7 +565,7 @@ function makeSwipe(id){
 		
 		
 		$('.pullDownLabel').toggleClass('fa fa-spinner fa-spin fa-3x',false);
-				//	document.getElementById("pullDownLabel").innerHTML = 'Unable to connect';
+			
 					
 					setTimeout(function(){
 					 spinnerOff=true;
@@ -651,8 +595,6 @@ function makeSwipe(id){
 			date = new Date();
 		if(oneTimeSendAjax){
 			oneTimeSendAjax = false;
-		//	$.post('http://'+IP+':8089/appriz/getMessagesByClient',{"idSecretClient": idScretClient},function(data){
-				
 			$.post('http://'+IP+':8089/appriz/getIndexedMsg_',{"idSecretClient": idScretClient, "refresh":"1"},function(data){
 			
 			$('#categories').html("<div class='MsG'></div>");
@@ -723,6 +665,7 @@ function makeSwipe(id){
 				//alert( JSON.stringify(e));getRules(kilomanyaroB)
 			}).done(function(){ 
 				current_inbox();
+				makeItScroll();
 				counterByMsg();
 				makeSwipe();
 				fix_messages();
@@ -751,6 +694,7 @@ function makeSwipe(id){
 			reportMsgState();
 			$(this).parent().parent().parent().remove();
 			$.jStorage.set('msg', btoa($('#categories').html()));
+			makeItScroll();
 			counterByMsg();
 				$("#deleteAllBtn").hide();
 		});
@@ -790,15 +734,7 @@ StartXCategories = 0;
 
 		
 
-		// Opciones para Menu borrar
-		
-   $( document ).on("taphold",".Message",function(){
-	  //7 navigator.notification.vibrate(500);
-		modeDeleteMenu = true;
-		$('#MenuFilter').css({'display':'none'});
-		$('#MenuDelete').css({'display':'block'});
-		console.log("Modo Delete ON");
-	});	 
+	
 
 	$( document ).on("touchstart",".Message",function(){
 		if(!modeDeleteMenu){
@@ -813,105 +749,47 @@ StartXCategories = 0;
 			$(this).find('.centralLI').css({"background":""});
 			}
 	});	
-		
-	$( document ).on("tapend","#menuDelBack",function(){
-		
-		modeDeleteMenu = false;
-		
-		$('#MenuFilter').css({'display':'block'});
-		$('#MenuDelete').css({'display':'none'});	
-		$('#cuentaSeleccion').html(0);
-		$('#subMenuDelete').velocity({'bottom' : '-120px'});
-		$('.deleted, .readToUnread').each(function( index ) {
-		idMsg=$(this).attr('id');
-		$("#"+idMsg+".Message .centralLI").css({"background":""});
-		$("#"+idMsg+".Message").removeClass('deleted');
-		$("#"+idMsg+".Message").removeClass('readToUnread');
-		$("#"+idMsg+".Message .centralLI").find('.iconCat span').removeClass('fa fa-check-circle-o');
-		 
-		
-				});
-		});	
-		
-
-			$( document ).on("tapend","#btnBorrarSeleccion",function(){
-									
-			/* 	showAlert($.t("Delete Selection"),$.t("Do you want to delete the selected messages?"),
-					function() //Si
-					{ */
-						console.log("-Respuesta SI-");
-						$('.deleted').each(function( index ) {
-						$('#cuentaSeleccion').html(	( parseInt($('#cuentaSeleccion').text())-1));
-						});
-							reportMsgState();
-						$('.deleted').remove(); 
-						counterByMsg(); 
-						$('#menuDelBack').trigger('tapend');
-					
-					/* },
-				  function(){});  */
-			});	
-			
-			
-$( document ).on("tapend","#deleteAllBtn",function(){
 	
-	showAlert($.t("Delete All"),$.t("Do you want to delete all messages?"),function(){
-		
-		$("#deleteAllBtn").hide();
-		$('.entity'+currentEntityID).each(function( index ) {
-			$(this).addClass('deleted');
-		});
-		reportMsgState();
-		$('.entity'+currentEntityID).remove(); 
+	$(".multiselectNav .fa-eye").tapend(function(){
+		$(".selectedMSG").removeClass("unread").removeClass("selectedMSG");
+		$('.multiselectNav').hide();
 		counterByMsg();
-	},function(){});
-});	
-
-
-	$( document ).on("tapend","#btnNoLeido",function(){
-								
-			//	showAlert($.t("Delete Selection"),$.t("Do you want to change the messages state to unread?"),function(){
-				
-					$('.deleted').each(function( index ) {
-					$('#cuentaSeleccion').html(	( parseInt($('#cuentaSeleccion').text())-1));
-					$(this).addClass('readToUnread');
-					$(this).removeClass('deleted');
-					
-				});
-					reportMsgState();
-					counterByMsg();
-					$('#menuDelBack').trigger('tapend');
-			 //$('#menuDelBack').trigger('tapend');
-				
-		//		},function
-		callNewMSG();
-			});	
-			
-			
-			$( document ).on("tapend","#btnMasOpciones",function(){
-	
-		if($('#subMenuDelete').css("bottom") == "38px"){
-			
-		  // $('#subMenuDelete').velocity({'bottom': (-$('.dropdownOption').height()-120)+"px"});
-		  $('#subMenuDelete').velocity({'bottom' : '-120px'});
-			}
-	else{
+		$('.filtersNav').show();
 		
+		reportMsgState();
+	});
 	
-		$('#subMenuDelete').velocity({'bottom' : '38px'});
-	}
-	});	
+	$(".multiselectNav .fa-eye-slash").tapend(function(){
+		$(".selectedMSG").addClass("unread").removeClass("selectedMSG");
+		$('.multiselectNav').hide();
+		$('.filtersNav').show();
+		counterByMsg();
+		reportMsgState();
+	});
 	
-	$( document ).on("tapend","#limpiezaTotal",function(){console.log("en limpieza total")});
-	$( document ).on("tapend","#EliminarLeidos",function(){console.log("en EliminarLeidos")});	
-	$( document ).on("tapend","#MostrarNoLeidos",function(){console.log("en lMostrarNoLeidos")});	
+		
+	$(".multiselectNav .fa-trash-o").tapend(function(){
+		showAlert($.t("Deleted selected messages"),$.t("Do you want to delete those ") +$(".selectedMSG").length+$.t(" messages?"),function(){
+			$(".selectedMSG").addClass("deleted");
+			reportMsgState();
+			$(".selectedMSG").remove();
+			$.jStorage.set('msg', btoa($('#categories').html()));
+			makeItScroll();
+			counterByMsg();
+			$('.multiselectNav').hide();
+			$('.filtersNav').show();
+		})
+	});
+	
+	$('#selNum').tapend(function(){
+		$(".selectedMSG").removeClass("selectedMSG");
+		$('.multiselectNav').hide();
+		$('.filtersNav').show();
+	})
+	
 			
-			
-/*
-$( document ).on("tapend","#categories .icon-arrow",function(){
-	showMessage($(this).parent().parent().parent().attr("id"));
-})
 
-*/
+
+
 
 
