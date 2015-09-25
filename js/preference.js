@@ -1,7 +1,7 @@
 
 $( document ).on("tapend",".categoriaPref",function(){
 	$(this).toggleClass("active");
-	$(this).find('.fa').toggleClass("fa-check-circle").toggleClass("fa-circle");
+	$(this).find('.fa').toggleClass("fa-check-circle").toggleClass("fa-circle-thin");
 });
 
 $( document ).on("tapend",".categoriaPref h6",function(e){
@@ -16,3 +16,6 @@ $( document ).on("tapend",".categoriaPref h6",function(e){
 	}
 	
 })
+
+ myScroll4 = new IScroll('#w1', { useTransition: true });
+ myScroll4.refresh();

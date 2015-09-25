@@ -3,14 +3,16 @@
 	text-align:center; width: 100%; 
 	background-size: cover;
 	background-position: center; 
-	margin-top:4px;
+	margin-top:1px;
 	font-size:30px;
 	line-height:100px;
 	font-weight:1200;
+	position: relative;
 }
 
 .categoriaPref span{
 		padding: 12px;
+		font-size: 16px;
 }
 .categoriaPref.active span{
 	border: 2px solid white;
@@ -20,12 +22,12 @@
 	background-color: transparent !important;
 }
 
-.categoriaPref:not(.active) h6,  .categoriaPref:not(.active) i{
+.categoriaPref:not(.active) h6{
 	display : none;
 }
 
 .categoriaPref  h6{
-	margin-top: -60px;
+	margin-top: -65px;
     font-size: 15px;
     font-weight: 100;
 }
@@ -42,8 +44,21 @@
 
 .selectSubCat.displayed {
 	display : block;
+	overflow-y: auto;
 }
 
 .selectSubCat ul{
 	margin : 0px;
+	color: white;
+}
+
+.wrappeable{
+	overflow-y: auto;
+}
+
+.categoriaPref .catIndicator{
+	position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -8px;
 }
