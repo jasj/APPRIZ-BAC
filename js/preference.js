@@ -1,3 +1,7 @@
+ImgCache.options.debug = true;
+
+// increase allocated space on Chrome to 50MB, default was 10MB
+ImgCache.options.chromeQuota = 50*1024*1024;
 
 $( document ).on("tapend",".categoriaPref",function(){
 	$(this).toggleClass("active");

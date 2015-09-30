@@ -37,10 +37,10 @@ function showInfoD(title,text,okFx){
 	
 	
 	$('#modal1Btn').show();
-	$( document ).on('click','.okBtn',function(){
+	$( document ).on('tapend','.okBtn',function(){
 		$('#modal1Btn').hide();
 		okFx();
-		$( document ).off('click','.okBtn');
+		$( document ).off('tapend','.okBtn');
 	});
 
 }
@@ -51,16 +51,18 @@ function showAlert(title,text,yesFn,noFn){
 	$('#modal2Btn p').html(text);
 	
 	$('#modal2Btn').show();
-	$( document ).on('click','.yesBtn',function(){
+	$( document ).on('tapend','.yesBtn',function(){
 		$('#modal2Btn').hide();
 		yesFn();
-		$( document ).off('click','.yesBtn');
+		$( document ).off('tapend','.yesBtn');
+		$( document ).off('tapend','.noBtn');
 
 	});
-	$( document ).on('click','.noBtn',function(){
+	$( document ).on('tapend','.noBtn',function(){
 		$('#modal2Btn').hide();
 		noFn();
-		$( document ).off('click','.noBtn');
+		$( document ).off('tapend','.yesBtn');
+		$( document ).off('tapend','.noBtn');
 	});
 }
 
