@@ -1,82 +1,60 @@
 nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
-	color : #1A6BA3;
+	color : #55B949;
 }
-
 
 .bankSection {
-background: white;
-	  border-bottom: 2px solid 	#1A6BA3;
-}
-
-
-
-.topHeader {
-     background: white;
-
-}
-
-
-.magicalArrow{
-	color: #5E5E5E;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYoAAAANCAYAAAC3vCnEAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wMeBC8vZh7zzgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAB9ElEQVR42u3bz24TMRDH8e+MN5tAQUiVeuKZuPG0vBEXDqjQJl7PcEgoSSG21PKnKr+PFGUVZ2dtj5XZSGt7/+FdIvIf8cGKd4t+O3Z3bGYn7wAe7afPTtoZxe+bcjkb28yG8e1o/L+KY6PzbdA/2mB80Z0fIs/O7T4//euXjHv9PY1jWfvjz/4CscECshzNT/bXR3o3v6R3+++HFXR2fu/ayyHfBY7WdLHj+OUoooiIyANvXkRERIVCREREhUJERFQoREREhUJERFQoRETkaZn+xUVv55lcGiyVQjK7s7IgWiOXyqfXL5karFsyR2AZNIdagupwUTfKnDyYjTYCDOTR6Xa42zJ+PD8/2piU2X+OnvzTW5uO9xnYmeNHzM9wfKP8nH4x781HJN19BnZmHN/juPXb7bets0O/LQ59PMx7K4+M299HQU7d3BplsE/jiRSKq+vtfr7MCS9EFqBAcZjgzZdrHMNxzPcvn5zixuxArfq1ExF5zv8ovq4bLY00Z4lGa0bNJNjvOnzbkmbJ4tCs0MJgl3ganhCTEici8rwLxWZDRmBLMLnxYgVTgrVGtsrni0YzZ+v7YmERTM2Yl2BuSpqIyLMvFFe3r9jVLbXe4LZjWgVGpS437HZbJi4pxv6F4wmbVlgvsAr4eLFS5kRE/pJvGN2pJl/hul4AAAAASUVORK5CYII=');
 }
 
 #categories li .infoBank h2 {
-	color : #444444;
-	    
+	color : #636466;
 }
 
-.unread{
-	color: #1A6BA3;
-}
 #categories li .icon-arrow .path1::before {
-	color : #1A6BA3;
+	color : #55B949;
 }
 
 #categories li .icon-myAlerts .path1::before, .icon-notifications, .icon-alerts, .icon-promotions, .icon-services {
-	color :#1A6BA3;
+	color : #55B949;
 }
 
-.contentMenu ul li button:hover .icon-myAlerts .path1:before {
-   color : #1A6BA3;
+.topHeader {
+    background: none repeat scroll 0% 0% #55B949;
 }
 
 
 
 nav.categoryNav {
-      background: none repeat scroll 0% #A4A4A5;
-  border-top: 1px solid black;
-  /* height: 35px; */
-  padding-top: 10px;
-  padding-bottom: 10px;
+    background: none repeat scroll 0% 0% rgba(47, 47, 50, 0.96);
 }
 
 #entities .newEntity {
-	background: none repeat scroll 0% 0% #1A6BA3;
+	background: none repeat scroll 0% 0% #55B949;
 }
 
 #categories .details h3, .details_ h3 {
-    color: #1A6BA3;
+    color: #55B949;
 }
 
 
 
 nav.categoryNav .icon-myAlerts.active .path1:before {
     content: "\e60b";
-    color: #1A6BA3;
+    color: #55B949;
 
 }
 
 nav.categoryNav span.active:before {
-    color: #1A6BA3;
+    color: #55B949;
 }
 
 
 .options .optionBtn {
-    background: #1A6BA3;
+    background: #55B949;
 }
 
 .options .btnBank2:hover {
-    background: #1A6BA3;
+    background: #55B949;
 }
 
 .dropdownOption ul li {
@@ -84,29 +62,29 @@ nav.categoryNav span.active:before {
 }
 
 .oneOption {
-	color: #1A6BA3;
+	color: #55B949;
 }
 
 nav.navAppriz ul li.active a {
-    color: #1A6BA3;
+    color: #55B949;
 
 }
 
 nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
-    color: #1A6BA3;
+    color: #55B949;
 }
 
 .contentMenu ul li button:hover .icon1 {
-    color: #1A6BA3;
+    color: #55B949;
 
 }
 
 .products ul li button , .services ul li button{
-	color: #1A6BA3;
+	color: #55B949;
 }
 
 .products h3 {
-    color: #4C4C4C;
+    color: #55B949;
 }
 
 nav.categoryNav span {
@@ -114,60 +92,60 @@ nav.categoryNav span {
 	color: #D5D4D3;
     /*color: rgb(85, 185, 73);*/
 }
-.services srv{
-    color: #4C4C4C;
-
-}
-
 
 nav.categoryNav span.active{
     content: "\e60b";
-	color: #1A6BA3;
+	color: #55B949;
     /*color: rgb(85, 185, 73);*/
 }
 
 .editOption li input {
-	color: #1A6BA3;
+	color: #55B949;
 }
 
 .editOption li select{
-	color: #1A6BA3;
+	color: #55B949;
 }
 
 .products ul li button .icon-arrow .path1::before, .services ul li button .icon-arrow .path1::before {
-	color: #1A6BA3;
+	color: #55B949;
 }
 
 .productNav li.active button{
-	color: #1A6BA3;
+	color: #55B949;
 }
 
 .productNav .icon-myAlerts .path1::before {
-	color: #1A6BA3;
+	color: #55B949;
 }
 
 input.toggle:checked + label::before {
-	 background: #1A6BA3;
+	 background: #55B949;
 }
 
 .productNav li button{
-	 background: #C4C4C4;
+	 background: none repeat scroll 0% 0% rgba(47, 47, 50, 0.96)
 }
-
-
 
 #colorHandle{
 	display : none;
-	color: ED1A2D;
+	color: rgb(85, 185, 73);
 }
 
-.bankLogo img{
-margin-top: -3px;
-
+.bankSection .icon-menu, header .icon-back,.topHeader .userInfo .icon-user, .topHeader .userInfo {
+	color: white !important;
 }
 
-* {
-
--webkit-tap-highlight-color: rgba(0,0,0,0); 
-
+input.toggleSetting:checked + label:before, .btnFull{
+	background: #55b949 !important;
 }
+
+header{
+	background: linear-gradient(to right, #55b949 17%, #FFFFFF 17%, #636466 17%)
+}
+
+.btnAction .icon-arrow .path1:before {
+	color: #55b949;
+}
+
+
