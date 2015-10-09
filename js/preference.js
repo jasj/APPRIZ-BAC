@@ -21,5 +21,12 @@ $( document ).on("tapend",".categoriaPref h6",function(e){
 	
 })
 
+
+$( document ).on("tapend",".preference",function(){
+	$(this).toggleClass("active");
+	var bkColor = $(this).parent().css("backgroundColor");
+	$(this).css({"color" : $(this).hasClass("active") ? bkColor : "#FFF"});
+});
+
  myScroll4 = new IScroll('#w1', { useTransition: true });
  myScroll4.refresh();
