@@ -1,8 +1,8 @@
 <?xml version='1.7' encoding='utf-8'?>
 <widget id="com.appriz.InfiniteScroll" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-	<name>InfiniteScroll</name>
+	<name>AppWithPreferences</name>
     <description>
-       Alpha version of InfiniteScroll
+       Alpha version of AppWithPreferences
     </description>
     <author email="asegreda@smartsoftint.com" href="http://smartsoftint.com">
         Appriz Team
