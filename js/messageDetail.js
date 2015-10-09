@@ -5,7 +5,6 @@ function matchColumnsHeight(){
 		maxWi = Math.max(Math.max($('.detailsList h4').eq(i).textWidth(),maxWi));
 		$('.detailsList h4').eq(i).height(maxHe);
 		$('.detailsList p').eq(i).height(maxHe+6);
-		 //$(this).height(200);
 	};
 	$('.detailsList .row').css({ width: (window.innerWidth - window.innerWidth*0.14 -maxWi)});
 	$('.detailsList h4').css({ width: maxWi});
@@ -16,14 +15,7 @@ function matchColumnsHeight(){
 function showMessage(id){
 	$('header .icon-back').css("color", "#FFFFFF" );
 	scrollPosition = myScroll3.y;
-//console.log("scroll y "+myScroll3.y);
-//myScroll3.scrollTo(0, )
 
-
-	//console.log("scro "+ scrollPosition)
-	//For old Androids
-	//$(".details_").css({"width" : (window.innerWidth - window.innerWidth*2*0.04)});
-	//$(".detail_fixed").css({"margin-left" : "0px"});
 	
 	//Message Handle
 	var msg = $("#"+id+".Message");
@@ -91,10 +83,12 @@ function showMessage(id){
 		$('.dropdownOption ul').html(management);
 		//Show the option button
 		$('#showOptions').show();	
+		$('.appends').css({bottom : "75px"});
 		
 	}catch(e){
 			 //If fails means that there are not any options, so hide the option btn.
 			 $('#showOptions').hide();
+			 $('.appends').css({bottom : "10px"});
 	}
 	//Begin a safe path if appends doesnt exist 
 	try{
