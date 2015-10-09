@@ -132,6 +132,9 @@ input.toggle:checked + label::before {
 	color: rgb(85, 185, 73);
 }
 
+/*
+	Make it by smartsoft
+*/
 .bankSection .icon-menu, header .icon-back,.topHeader .userInfo .icon-user, .topHeader .userInfo {
 	color: white !important;
 }
@@ -147,5 +150,30 @@ header{
 .btnAction .icon-arrow .path1:before {
 	color: #55b949;
 }
+
+.bankLogo img
+
+
+
+@media (max-width: 481px){
+	.mainBankSection h2 a {
+		width: 124%;
+		margin-left: -20px;
+		margin-top: 10px;
+	}
+	
+	.bankSection h2 a {
+    display: block;
+    float: left;
+    width: 98%;
+    padding: 13px 0 0 5px;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+}
+
+
+/*---------------------------------------------------------*/
+
 
 
