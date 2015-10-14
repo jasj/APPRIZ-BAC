@@ -39,6 +39,7 @@ function login(){
 				$.jStorage.set('idSecretClient', data['idSecretClient']);
 				$.jStorage.set('pin', data['pin']);
 				$.jStorage.set('logAs', logAs);
+				$.jStorage.set('idSecretClient',1);
 				$('.user div').html($.jStorage.get('logAs'));
 				reloadEntities();
 				

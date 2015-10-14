@@ -16,19 +16,9 @@ function reloadEntities(){
 				var frsTime = 0;	
 				data.forEach(function(entity){
 					
-				/*
-					if(!($.jStorage.index().indexOf(entity["entityID"]+".css") > -1  && ($.jStorage.get(entity["entityID"]+".css")==entity["vCSS"]))){
-						downloadContent("css_"+entity["entityID"]+".css",S3Bucket+FormatInteger(entity["entityID"],4)+'/CSS/entity.css',entity["vCSS"]);
-						frsTime = 1;
-					}
-					if(!($.jStorage.index().indexOf(entity["entityID"]+".png") > -1  && ($.jStorage.get(entity["entityID"]+".png")==entity["vImg"]))){
-					 downloadContent("img_"+entity["entityID"]+".png",S3Bucket+FormatInteger(entity["entityID"],4)+'/Advertising/Logos/big_logo.png',entity["vImg"]);
-						frsTime = 1;
-					}
-				*/
 					entityIDs.push(entity["entityID"]);
 				
-				
+					$.jStorage.set('currentEntityID',1);
 					if( currentEntityID < 1 || isNaN(currentEntityID)){
 						
 						currentEntityID  = entity["entityID"];

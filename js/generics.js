@@ -37,10 +37,11 @@ function showInfoD(title,text,okFx){
 	
 	
 	$('#modal1Btn').show();
-	$( document ).on('tapend','.okBtn',function(){
+	$( '.okBtn' ).one('tapend',function(event){
 		$('#modal1Btn').hide();
+		
 		okFx();
-		$( document ).off('tapend','.okBtn');
+		
 	});
 
 }
@@ -51,18 +52,22 @@ function showAlert(title,text,yesFn,noFn){
 	$('#modal2Btn p').html(text);
 	
 	$('#modal2Btn').show();
-	$( document ).on('tapend','.yesBtn',function(){
+	$( '.yesBtn' ).tapend(function(event){
+		$( this ).off( event );
+		$( '.yesBtn' ).off('tapend');
+		$( '.noBtn' ).off('tapend');
 		$('#modal2Btn').hide();
 		yesFn();
-		$( document ).off('tapend','.yesBtn');
-		$( document ).off('tapend','.noBtn');
+	
 
 	});
-	$( document ).on('tapend','.noBtn',function(){
+	$( '.noBtn' ).tapend(function(event){
+		$( this ).off( event );
+		$( '.yesBtn' ).off('tapend');
+		$( '.noBtn' ).off('tapend');
 		$('#modal2Btn').hide();
 		noFn();
-		$( document ).off('tapend','.yesBtn');
-		$( document ).off('tapend','.noBtn');
+		
 	});
 }
 
@@ -70,6 +75,11 @@ $.fn.hasAttr = function(name) {
 	return this.attr(name) !== undefined;
 };
 
+function checkPress(ev){
+	var endX = ev.pageX || ev.originalEvent.changedTouches[0].pageX;
+	var endY = ev.pageY || ev.originalEvent.changedTouches[0].pageY;
+	return Math.abs(endX - startTap.X)  < 10 && Math.abs(endY - startTap.Y) < 10	
+}
 
 //generics variables
 modeDeleteMenu = false;
