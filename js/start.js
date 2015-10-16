@@ -1,10 +1,11 @@
 
 function onDeviceReady(){
 	
-	try{		
+	try{			
+		onDeviceReady_ic();
 		onDeviceReady_fm();
 		onDeviceReady_pn();
-		onDeviceReady_ic();
+	
 		document.addEventListener("backbutton", backKeyDown, true);
 	    document.addEventListener("menubutton", menuKeyDown, true);
 		document.addEventListener("resume", onResume, false);
