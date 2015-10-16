@@ -1,4 +1,5 @@
 function onDeviceReady_ic(){
+	alert("init");
 	ImgCache.options.debug = true;
 	ImgCache.options.chromeQuota = 150*1024*1024;
 	
