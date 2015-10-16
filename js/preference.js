@@ -28,5 +28,3 @@ $( document ).on("tapend",".preference",function(){
 	$(this).css({"color" : $(this).hasClass("active") ? bkColor : "#FFF"});
 });
 
- myScroll4 = new IScroll('#w1', { useTransition: true });
- myScroll4.refresh();
