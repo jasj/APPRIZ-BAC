@@ -45,8 +45,8 @@
 }
 .selectSubCat{
 	display : none;
-	width: 100%;
-	padding: 16px;
+    width: 96%;
+    padding: 2%;
 }
 
 .selectSubCat.displayed {
@@ -70,7 +70,9 @@
     margin-top: -8px;
 }
 
-
+.categoriaPref:not(.active) +.selectSubCat{
+	display: none;
+}
 
 .preference{
 	float: left;
