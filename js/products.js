@@ -1,7 +1,7 @@
 
 view = "unselect";
 function addProducts(products,view){
-	$(".productNav li").eq(0).find("button").html(view  == "rules" ? '<span class="icon-myAlerts"><span class="path1"></span><span class="path2"></span></span>'+$.t('My Alerts') : '<span class="icon-services"><span class="path1"></span></span>'+$.t('Services'));
+	$(".productNav li").eq(0).find("button").html(view  == "rules" ? '<span class="icon-myAlerts rbtn"><span class="path1"></span><span class="path2"></span></span>': '<span class="icon-services rbtn"><span class="path1"></span></span>');
 	for( product in products){
 		console.log(product);
 		$('#products .products ul').append('<li page-content='+view+'><button><prd>'+product+'</prd><span class="icon-arrow"><span class="path1"></span></button></li>');
@@ -42,3 +42,6 @@ $( document ).on('tapend','#products .products li',function(){
 	currentProduct = $(this).find("prd").html();
 });
 
+$( document ).on("tapend",".back",function(){
+backKeyDown()
+});
