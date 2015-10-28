@@ -4,7 +4,7 @@ function getAds(){
 	
 		$("#ads").html('<img src="'+data["Content"]+'" alt=""/>');
 		console.dir(data);
-		swipeDelete();
+		swipeDelete(); 
 	}
 	);
 }
