@@ -1055,7 +1055,7 @@ margin-top: 69px;
 }
 
 .deleteSwipe {
-    background: #e74c3c;
+    background: rgb(247,163,10);
     color: #FFFFFF;
     font-size: 1.04em;
     text-transform: uppercase;
@@ -1140,7 +1140,7 @@ margin-top: 69px;
 	color: white;
 	font-weight: 1000;
 	text-align : center;
-	background: #E75040;
+	background: rgb(247,163,10);
 	display : none;
 	width: 100%;
     z-index: 1999;
@@ -1346,7 +1346,7 @@ nav.categoryNav .icon-myAlerts.active .path2:before {
 }
 
 .bubble {
-    background: #D5D4D3;
+    background: #F9B31D;
     height: 15px;
     width: 15px;
     border-radius: 360px 360px 360px 0;

@@ -4,7 +4,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 
 
 .bankSection {
-	background:  #1A6BA3;
+	background:  rgb(0,89,156);
 	  border-bottom: 2px solid 	#1A6BA3;
 }
 
@@ -14,6 +14,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
   background: #1A6BA3;
 
 }
+
 
 
 .magicalArrow{
@@ -42,7 +43,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 
 
 nav.categoryNav {
-      background: none repeat scroll 0% #A4A4A5;
+      background: none repeat scroll 0% #DCDCDE;
   border-top: 1px solid black;
   /* height: 35px; */
   padding-top: 10px;
@@ -110,11 +111,17 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 
 nav.categoryNav span {
     content: "\e60b";
-	color: #D5D4D3;
+	color: #FFFFFF;
     /*color: rgb(85, 185, 73);*/
 }
 .services srv{
     color: #4C4C4C;
+
+}
+
+nav.categoryNav .icon-myAlerts .path1:before {
+    content: "\e60b";
+    color: white;
 
 }
 
