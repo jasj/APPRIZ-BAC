@@ -98,7 +98,15 @@
 					rulesChanges = {};
 				});
 				
+			}else {
+			if(!$.isEmptyObject(preferenceChanges)){
+				showAlert($.t("Preference Changed"), $.t("Do you want to save changes?") , function(){					
+					processPreferenceChange();
+				},function(){
+					preferenceChanges = {};
+				});				
 			}
+		}
 			console.log(JSON.stringify(back));
 		var inBack = back.pop();
 		$('#pin').hide();
