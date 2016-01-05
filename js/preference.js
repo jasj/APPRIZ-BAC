@@ -16,7 +16,12 @@ function getPreference() {
 	},'json') .fail(function(e) {
 		showInfoD($.t("Internet Connection"), $.t("Error getting entity preferences.") , function(){	preferenceChanges = {};	});
 		console.log( JSON.stringify(e) );	    
-	}).done(function(){$('.refreshing_list').hide(); });
+	}).done(function(){
+		$('.refreshing_list').hide();
+		
+		   prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 3, mouseWheel: true }); 
+
+		});
 		
 }
 
@@ -84,7 +89,7 @@ function showPreference(data){
 		
 	}	
 	html += row + "</div>";
-	$("#preferences").html(html);
+	$("#preferences .products .scroller").html(html);
 	getPreferenceByUser();
 }
 
