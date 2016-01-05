@@ -75,7 +75,7 @@ function showPreference(data){
 		row += '<div class="categoriaPref" style="background-image:  url('+data[e].img+'); color: '+hexToRGB(data[e].fontColor)+' ">';
 		row += '<div style="background-color: '+hexToRGB(data[e].backColor, 0.8)+' ">';
 		row += '<i class="fa fa-circle-thin catIndicator"></i>';
-		row += '<span style="background-color: '+hexToRGB(data[e].backColor)+' ">'+data[e].nombre+'</span>';
+		row += '<span style="background-color: '+hexToRGB(data[e].backColor)+' " bkColor="'+hexToRGB(data[e].backColor)+'">'+data[e].nombre+'</span>';
 		row += '<h6 >'+$.t("More")+'</h6>';
 		row += '</div></div>';		
 
@@ -116,11 +116,12 @@ function showPreferenceByUser(data){
 
 		$('span:contains('+k+')').closest(".categoriaPref").addClass("active");
 		$('span:contains('+k+')').prev().addClass("fa-check-circle").removeClass("fa-circle-thin");
-
+		var bkColor = $('span:contains('+k+')').attr("bkColor");
+		console.log(bkColor);
 		//if the value is an object, loop through each instance of the subcategories
 		if(v instanceof Object) {
 			$.each(v, function(key, val) {
-				$('span:contains('+k+')').closest(".categoriaPref").next().children('div:contains('+key+')').addClass("active").css("color", "rgb(221, 160, 221)");
+				$('span:contains('+k+')').closest(".categoriaPref").next().children('div:contains('+key+')').addClass("active").css({"color" : bkColor });;
 			});		
 		}
 	}); //each
@@ -179,11 +180,13 @@ $( document ).on("tapend",".categoriaPref",function(){
 	$(this).toggleClass("active");
 	$(this).find('.fa').toggleClass("fa-check-circle").toggleClass("fa-circle-thin");
 	preferenceChanges = {"er" : 1};	
+	
 });
 
 // show subcategorias
 $( document ).on("tapend",".categoriaPref h6",function(e){
 	e.stopPropagation();
+	
 
 	var text = $(this).text();
 	$(".selectSubCat.displayed").each(function(){
@@ -198,7 +201,7 @@ $( document ).on("tapend",".categoriaPref h6",function(e){
 	}else{
 		$(this).text($.t('More'));
 	}
-	
+	 prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 3, mouseWheel: true }); 
 });
 
 // activa subcategorias
