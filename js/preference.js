@@ -92,7 +92,7 @@ function showPreference(data){
 	html += row + "</div>";
 	$("#preferences .products .scroller").html(html);
 	getPreferenceByUser();
-		var target = $("[cat="+data[e].id+"]");
+	/*	var target = $("[cat="+data[e].id+"]");
 		ImgCache.isBackgroundCached(target, function(path, success) {
 	if (success) {
     // already cached
@@ -103,7 +103,7 @@ function showPreference(data){
 		ImgCache.useCachedBackground(target);
     });
   }
-});
+}); */
 }
 
 function getPreferenceByUser() {
