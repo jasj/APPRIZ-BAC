@@ -180,43 +180,48 @@ console.log($(".categoriaPref.active").length);
 }
 
 // activa categoria
-$( document ).on("tapend",".categoriaPref",function(){
-	$(this).toggleClass("active");
-	$(this).find('.fa').toggleClass("fa-check-circle").toggleClass("fa-circle-thin");
-	preferenceChanges = {"er" : 1};	
-	
+$( document ).on("tapend",".categoriaPref",function(e){
+	if(checkPress(e)){
+		$(this).toggleClass("active");
+		$(this).find('.fa').toggleClass("fa-check-circle").toggleClass("fa-circle-thin");
+		preferenceChanges = {"er" : 1};	
+	}
 });
 
 // show subcategorias
 $( document ).on("tapend",".categoriaPref h6",function(e){
-	e.stopPropagation();
-	
-	var y = prefScroll.y;
-	var text = $(this).text();
-	$(".selectSubCat.displayed").each(function(){
-		$(this).removeClass("displayed");
-		$(this).parent().find("h6").eq(0).text($.t('More'));
-		$(this).parents(".categoriaPref").next(".selectSubCat").removeClass('displayed');
-	});
+	if(checkPress(e)){
+			e.stopPropagation();
+		
+		var y = prefScroll.y;
+		var text = $(this).text();
+		$(".selectSubCat.displayed").each(function(){
+			$(this).removeClass("displayed");
+			$(this).parent().find("h6").eq(0).text($.t('More'));
+			$(this).parents(".categoriaPref").next(".selectSubCat").removeClass('displayed');
+		});
 
-	if( text == $.t('More') ){
-		$(this).text($.t('Less'));		
-		$(this).parents(".categoriaPref").next(".selectSubCat").addClass('displayed');
-	}else{
-		$(this).text($.t('More'));
+		if( text == $.t('More') ){
+			$(this).text($.t('Less'));		
+			$(this).parents(".categoriaPref").next(".selectSubCat").addClass('displayed');
+		}else{
+			$(this).text($.t('More'));
+		}
+		
+		  prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 1, mouseWheel: true, startY: y}); 
+		
 	}
-	
-	  prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 1, mouseWheel: true, startY: y}); 
 	
 });
 
 // activa subcategorias
 $( document ).on("tapend",".preference",function(){
-	$(this).toggleClass("active");
-	var bkColor = $(this).parent().css("backgroundColor");
-	$(this).css({"color" : $(this).hasClass("active") ? bkColor : "#FFF"});
-	preferenceChanges = {"er" : 1};	
-
+	if(checkPress(e)){
+		$(this).toggleClass("active");
+		var bkColor = $(this).parent().css("backgroundColor");
+		$(this).css({"color" : $(this).hasClass("active") ? bkColor : "#FFF"});
+		preferenceChanges = {"er" : 1};	
+	}
 });
 
 $( document ).on("tapend","[page-content=preferences]",function(){
