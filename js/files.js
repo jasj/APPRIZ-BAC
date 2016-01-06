@@ -13,6 +13,23 @@ function gotFS(fileSystem) {
 	fSys = fileSystem;
 }
 
+function getData(url){
+	var file = md5(url);
+	if(fSys != null){
+		 fSys.root.getFile(cordova.file.dataDirectory + file, {create: true, exclusive: false}, 
+		 function(fileEntry){
+			 return fileEntry.toURL();
+		 }
+		 , function(e){
+			 downloadContent(file,url,1);
+			 return url;
+		});
+		
+	}else{
+		return url;
+	}
+}
+
 function getFileLocalURL(file, object, target,url){
 	if(fSys != null){
 		 fSys.root.getFile(cordova.file.dataDirectory + file, {create: true, exclusive: false}, 
@@ -22,6 +39,7 @@ function getFileLocalURL(file, object, target,url){
 		 , function(e){object.attr(target,url)});
 	}else{
 		 object.attr(target,url);
+		 
 	}
 }
 
