@@ -73,7 +73,7 @@ function showPreference(data){
     var row = "";
 	for (var e in data) { //each object at this level
 		row += '<div idCategoria="'+data[e].id+'" class=categoria>';
-		row += '<div cat= "'+data[e].id+'" class="categoriaPref" style="background-image:  url('+data[e].img+'); color: '+hexToRGB(data[e].fontColor)+' ">';
+		row += '<div cat= "'+data[e].id+'" class="categoriaPref" style="background-image:  url('+getData(data[e].img)+'); color: '+hexToRGB(data[e].fontColor)+' ">';
 		row += '<div style="background-color: '+hexToRGB(data[e].backColor, 0.8)+' ">';
 		row += '<i class="fa fa-circle-thin catIndicator"></i>';
 		row += '<span style="background-color: '+hexToRGB(data[e].backColor)+' " bkColor="'+hexToRGB(data[e].backColor)+'">'+data[e].nombre+'</span>';
@@ -92,18 +92,7 @@ function showPreference(data){
 	html += row + "</div>";
 	$("#preferences .products .scroller").html(html);
 	getPreferenceByUser();
-	/*	var target = $("[cat="+data[e].id+"]");
-		ImgCache.isBackgroundCached(target, function(path, success) {
-	if (success) {
-    // already cached
-		ImgCache.useCachedBackground(target);
-	} else {
-    // not there, need to cache the image
-		ImgCache.cacheBackground(target.css('background-image'), function () {
-		ImgCache.useCachedBackground(target);
-    });
-  }
-}); */
+
 }
 
 function getPreferenceByUser() {
