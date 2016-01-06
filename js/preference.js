@@ -1,5 +1,6 @@
 
-
+//Global variables of the module
+  preferenceChanges = {};
 		
 
 function getPreference() {
@@ -19,7 +20,7 @@ function getPreference() {
 	}).done(function(){
 		$('.refreshing_list').hide();
 		
-		   prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 3, mouseWheel: true }); 
+		   prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 1, mouseWheel: true}); 
 
 		});
 		
@@ -72,7 +73,7 @@ function showPreference(data){
     var row = "";
 	for (var e in data) { //each object at this level
 		row += '<div idCategoria="'+data[e].id+'" class=categoria>';
-		row += '<div class="categoriaPref" style="background-image:  url('+data[e].img+'); color: '+hexToRGB(data[e].fontColor)+' ">';
+		row += '<div cat= "'+data[e].id+'" class="categoriaPref" style="background-image:  url('+data[e].img+'); color: '+hexToRGB(data[e].fontColor)+' ">';
 		row += '<div style="background-color: '+hexToRGB(data[e].backColor, 0.8)+' ">';
 		row += '<i class="fa fa-circle-thin catIndicator"></i>';
 		row += '<span style="background-color: '+hexToRGB(data[e].backColor)+' " bkColor="'+hexToRGB(data[e].backColor)+'">'+data[e].nombre+'</span>';
@@ -91,6 +92,18 @@ function showPreference(data){
 	html += row + "</div>";
 	$("#preferences .products .scroller").html(html);
 	getPreferenceByUser();
+		var target = $("[cat="+data[e].id+"]");
+		ImgCache.isBackgroundCached(target, function(path, success) {
+	if (success) {
+    // already cached
+		ImgCache.useCachedBackground(target);
+	} else {
+    // not there, need to cache the image
+		ImgCache.cacheBackground(target.css('background-image'), function () {
+		ImgCache.useCachedBackground(target);
+    });
+  }
+});
 }
 
 function getPreferenceByUser() {
@@ -129,7 +142,7 @@ function showPreferenceByUser(data){
 
 
 function processPreferenceChange() {
-
+	console.log("oh no!")
 	$('.refreshing_list').show();
 	var tmp_preferenceChange;	
 	tmp_preferenceChange = new Object();
@@ -138,29 +151,31 @@ function processPreferenceChange() {
 
 	tmp_preferenceChange["idSecretClient"] = idScretClient;
 
-
-	$(".categoria").each(function(){		
+console.log($(".categoriaPref.active").length);
+	$(".categoriaPref.active").each(function(){	
+		
 		var name = $(this).find("span").html();
+		
 		var hasOptionsSelected = false;
 		var created = false;
-		
-	 	$(this).find(".preference").each(function(){			
-			if( $(this).hasClass("active") ) {
+		console.log($(this).parent().find(".preference.active").length);
+	 	$(this).parent().find(".preference.active").each(function(){
+					console.log("why not!")	
 				if(!created){
 					tmp_preferenceChange["preferences"][name]= new Object();
 					created = true;
 				}
 				tmp_preferenceChange["preferences"][name][$(this).html()]= true;
 				hasOptionsSelected = true;				
-			}
+			
 		});
 
-		if( $(this).find(".categoriaPref ").hasClass("active") && !hasOptionsSelected) {			
+		if( !hasOptionsSelected) {			
 			tmp_preferenceChange["preferences"][name]=true;			
 		}		
 		
 	});	
-	
+	console.log(JSON.stringify(tmp_preferenceChange));
 	$('.refreshing_list').show();
 	$.post('http://'+IP+':8089/appriz/sendCustomerInformation', tmp_preferenceChange,function(data){	
 		if (data["status"]== 200){
@@ -187,7 +202,7 @@ $( document ).on("tapend",".categoriaPref",function(){
 $( document ).on("tapend",".categoriaPref h6",function(e){
 	e.stopPropagation();
 	
-
+	var y = prefScroll.y;
 	var text = $(this).text();
 	$(".selectSubCat.displayed").each(function(){
 		$(this).removeClass("displayed");
@@ -201,7 +216,9 @@ $( document ).on("tapend",".categoriaPref h6",function(e){
 	}else{
 		$(this).text($.t('More'));
 	}
-	 prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 3, mouseWheel: true }); 
+	
+	  prefScroll = new IScroll('#preferences .products', { preventDefault: false, probeType: 1, mouseWheel: true, startY: y}); 
+	
 });
 
 // activa subcategorias
