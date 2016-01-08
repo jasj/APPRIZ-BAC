@@ -215,7 +215,7 @@ $( document ).on("tapend",".categoriaPref h6",function(e){
 });
 
 // activa subcategorias
-$( document ).on("tapend",".preference",function(){
+$( document ).on("tapend",".preference",function(e){
 	if(checkPress(e)){
 		$(this).toggleClass("active");
 		var bkColor = $(this).parent().css("backgroundColor");
