@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Appriz Connect Protect Engage</title>
+    <link rel="stylesheet" href="css/scroller.css">
+	<link rel="stylesheet" href="css/entity.css" id="">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/entity.css" id="entityStyle">
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="apprizApp">
+
+<!-- Appriz Code -->
+
+<div id="login">
+     <header class="loginHead">
+
+            </header>
+            <div id="mainw">
+                <div class="login">
+                    <a class="logo" href=""><img src="img/logo.png" alt=""/></a>
+                <formo class="loginBox" >
+                    <fieldset>
+
+                        <div class="row">
+                            <input type="text" i18Trans="Email" i18Target="placeholder"/>
+                            <span class="icon-user"></span>
+                        </div>
+                        <div class="row">
+                            <input type="password" i18Trans="Password" i18Target="placeholder"/>
+                            <span class="icon-lock"></span>
+                        </div>
+                        <button class="btnFull submitLogin" i18Trans="Login"></button>
+						<a class="newUserlink" i18Trans="Forgot my password" page-content="reset-pass"></a>
+                        <a class="newUserlink" i18Trans="Are you new Appriz User?" page-content="first-time"></a>
+                    </fieldset>
+                </formo>
+                </div><!--close login-->
+
+            </div><!--close main-->
+			
+			<section id="Waiting">
+				<div class="wConteiner">
+					<div><i class='fa fa-spinner fa-spin'></i>&nbsp;<label i18Trans="Checking previus session"></label><p i18Trans="Do you want to proceed in offline mode"></p></div>
+				</div>
+			</section>
+
+</div>
+
+<div id="appHolder">
+
+	
+	<!--close bank section header-->
+
+    <div id="menuAppriz">
+        <div class="bgModal"></div>
+        <div class="allMenu">
+
+        <ul class="topHeader">
+            <li class="bankBrand" >
+                <a page-content="inbox"><img  class= "imglogo" src="img/overColor.png" alt=""/></a>
+            </li>
+            <li class="userInfo">
+                <p class="welcome" i18Trans="Welcome"></p>
+
+                <h4 class="user" text-align=""><span class="icon-user"></span>
+				<div ></div>
+				</h4>
+
+            </li>
+        </ul> 
+  <nav class="navAppriz">
+            <ul>
+                <li class="active">
+                    <a menu-page="#mainOptions" class="icon-menu"></a>
+                </li>
+				  <li page-content="settingsPage">
+                    <a class="icon-settings px5" ></a>
+                </li>
+                <li>
+                    <a menu-page="#info" class="fa fa-question px5"></a>
+                </li>
+              
+            </ul>
+        </nav>
+        <!--close navAppriz-->
+        <div id="mainOptions" class="contentMenu">
+            <ul>
+                <li>
+                    <button page-content="products" products="rules"><span class="icon1 icon-myAlerts"><span class="path1"></span><span
+                            class="path2"></span></span><text i18Trans="My Alerts"/>
+                    </button>
+                </li>
+                <li>
+                    <button page-content="products" products="services"><span class="icon1 icon-services"></span><text i18Trans="Services"/></button>
+                </li>
+                <li style="display : none">
+                    <button  page-content="products"><span class="icon1 icon-pushcenter"></span><text i18Trans="Push Center"/></button>
+                </li>
+                <li>
+                    <button page-content="demo"><span class="icon1 icon-demo"></span><text i18Trans="Demo"/></button>
+                </li>
+            </ul>
+        </div>
+<!--close content menu-->
+
+           <div id="info" class="contentMenu" style="display: none">
+           <ul>
+		   </br>
+		   <li><p style="margin-left: 17px;">© 2015 APPRIZ. Todos los derechos reservados</p></li>
+		    
+			<li><p style="margin-left: 17px;">Para mas información: support@appriz.com</p></li>
+<!--                 <li>
+                    <button page-content="help" ><span class="icon1 fa fa-question-circle px5"><span class="path1"></span><span
+                            class="path2"></span></span><text i18Trans="Help"/>
+                    </button>
+                </li>
+                <li>
+                    <button page-content="faqs" ><span class="icon1 fa fa-cogs"></span><text i18Trans="FAQ"/></button>
+                </li>
+             
+                <li>
+                    <button page-content="about"><span class="icon1 fa fa-info"></span><text i18Trans="About"/></button>
+                </li>-->
+            </ul>
+            <button class="newEntity" page-content="suscribe" i18Trans="New Entity" style="visibility:hidden"></button> 
+        </div>
+        <!--close content menu-->
+        <button class="log"><span class="icon-logOut"></span><text i18Trans="Log Out"/></button>
+    </div>
+    </div><!--close all menu-->
+<!--close menu Appriz-->
+
+<!--headers-->
+	<header class="bankSection mainBankSection active" id="headerMain" >
+   <h2><a class="bankLogo" href="#"><img src="img/overWhite.png" alt="Bank" id="overWhiteHeader" /></a></h2>
+        <button class="icon-menu menu-main"></button>
+    </header>
+	<header id="headerGeneral">
+		<i class="out fa fa-power-off"></i>
+		<a class="icon-back" href="#"></a>
+		<h2 class="headerText"></h2>
+		<button class="icon-menu menu-main"></button>
+     </header>
+	 
+	 
+	 	<header id="headerSett">
+		<i class="out fa fa-power-off"></i>
+		<a class="icon-back backSet" href="#"></a>
+		<h2 class="headerText"></h2>
+		<button class="icon-menu menu-main"></button>
+     </header>
+	 
+	 
+	 
+	  <header class="bankSection" id="headerEntity" >
+                <a class="icon-back"></a>
+                     <h2><a class="bankLogo" href="#" page-content="inbox"><img src="img/overWhite.png" alt="Bank"/></a></h2>
+                <span class="icon-menu"></span>
+     </header>
+<!--headers-->
+	
+<div id="growingSpace">	
+	<div  id='inbox' class='page-content active' header='headerMain'>
+		<section >
+		<div id="wrapper_message">
+			<div class="scroller">
+			
+		<div id="pullDown" class="pullDown">
+			<span class="pullDownIcon"></span><span id="pullDownLabel" class="pullDownLabel">Pull down to refresh...</span>
+		</div>
+	
+				<ul id="categories" class="noselect">
+				
+				</ul>
+			<p id='noMessage' style="text-align: center; ">No message to display</p>
+			</div>
+		</div>
+		
+			<!--<p class='noMessages' i18Trans="No messages to display"></p>
+			close categories-->
+		</section>
+		<!--close main-->
+		
+			<div class="fullWrapper">
+			
+			<div id="ads">
+				<img src="" alt=""/>
+			</div>
+			<div id="deleteAllBtn" i18Trans="Delete All"></div>
+			<nav class="categoryNav">
+			
+				<ul>
+					<li typemsg='1'>
+						<div class="bubble"></div>
+						<a ><span class="icon-myAlerts active"><span class="path1"></span><span
+							class="path2"></span></span></a></li>
+					<li typemsg='2'>
+						<div class="bubble"></div>
+						<a ><span class="icon-alerts path1 active"></span></a></li>
+					<li typemsg='3'>
+						<div class="bubble"></div>
+						<a ><span class="icon-notifications active"></span></a></li>
+					<li typemsg='4'>
+						<div class="bubble"></div>
+						<a ><span class="icon-promotions active"></span></a></li>
+					<li typemsg='5'>
+						<div class="bubble"></div>
+						<a ><span class="icon-services active"></span></a></li>
+				</ul>
+				<div id='colorHandle'>colorHandle</div>
+			</nav>
+
+
+		</div>
+	</div>
+
+	<div  id='MessageDetail' class='page-content' header='headerEntity'>
+			<div class='plainMSG'>
+						<div class="detailCategory">
+							<div class="detail_fixed">
+								<div class="details_">
+									<h3></h3>
+								</div><!--close details-->
+								<h6 class="dateBank"><span class="icon-primitive-dot dotInactive"></span>9 de Febrero 2015, 11:20:00</h6>
+								<hr class="line"/>
+							</div>
+								<div class="appends"></div>
+							<div class="historye" ></div>
+
+						</div><!--close detail category-->
+			</div>
+			
+					
+					<div class="wraperWindows">
+							<div class="options">
+							 <!-- <button class="btnBank1 optionBtn">Avalible Options</button> -->
+								<div class="dropdownOption">
+									<ul>
+									</ul>
+								</div><!--close dropdown Option information-->
+							   <button id="showOptions" class="btnBank1 optionBtn" i18Trans="Avalible Options"></button>
+							   <button id="showHistory" class="btnBank1 optionBtn" i18Trans="History"></button>
+							</div><!--close options-->
+					</div>
+			<div class='htmlMSG'></div>
+
+	</div>
+
+
+	<div  id='settingsPage' class='page-content' header='headerSett' headerText="Settings">
+			
+				<section id="main">
+					<div class="settings">
+					<div class="scroller">
+						<h3 i18Trans="Change your secret codes"></h3>
+						<button class="btnAction" page-content="passwordChg">
+							<text i18Trans="Change my Password"/></text>
+								 <span class="icon-arrow">
+									<span class="path1"></span><span class="path2"></span>
+								 </span>
+						</button>
+
+						<button class="btnAction" page-content="pinChg">
+							<text i18Trans="Change the access code"/></text>
+								 <span class="icon-arrow">
+									<span class="path1"></span><span class="path2"></span>
+								 </span>
+						</button>
+
+						<h3 i18Trans="Download banners only at Wifi"></h3>
+
+						<div class="onoffswitch">
+							<input type='checkbox' name='atWifi' id='atWifi' class='toggleSetting'><label for='atWifi'></label>
+						</div>
+						<h3 i18Trans="Ask me my PIN only at the start"></h3>
+
+						<div class="onoffswitch">
+							<input type='checkbox' name='pinPolicy' id='pinPolicy' class='toggleSetting'><label for='pinPolicy'></label>
+						</div>
+
+						<h3 i18Trans="Keep messages for at least"></h3>
+
+						<ul class="weeksOption">
+							<li><input type="radio" name="checkboxG1" id="checkboxG1" class="css-checkbox" value='1'/><label for="checkboxG1" class="css-label" week="1"> <span>1</span> <text i18Trans="Week"/></label></li>
+							<li><input type="radio" name="checkboxG1" id="checkboxG2" class="css-checkbox" value='2'/><label for="checkboxG2" class="css-label" week="2"> <span>2</span> <text i18Trans="Weeks"/></label></li>
+							<li><input type="radio" name="checkboxG1" id="checkboxG3" class="css-checkbox" value='3'/><label for="checkboxG3" class="css-label" week="3"><span>3</span> <text i18Trans="Weeks"/></label></li>
+							<li><input type="radio" name="checkboxG1" id="checkboxG4" class="css-checkbox" value='4'/><label for="checkboxG4" class="css-label" week="4"><span>4</span> <text i18Trans="Weeks"/></label>
+							</li>
+						</ul>
+
+						<button class="btnFull" i18Trans="Save Settings"></button>
+
+				</div>
+					</div><!--close settings-->
+				</section><!--close main-->
+
+	</div>
+	
+	
+	
+	
+	
+	
+</div>
+
+<div  id='products' class='page-content' header='headerEntity'>
+	          <!--close bank section header-->
+            <section id="main" class="productsMain">
+                <nav class="productNav">
+                    <ul>
+                        <li><button disabled><span class="icon-myAlerts"><span class="path1"></span><span class="path2"></span></span></button></li>
+                        <li class="active"><button i18Trans="Products" disabled></button></li>
+                    </ul>
+                </nav><!--close product Nav-->
+                <div class="products"><ul></ul></div><!--close products-->
+            </section><!--close main-->
+</div>
+
+<div  id='reset-pass' class='page-content' header='headerGeneral' headerText="Password reset">
+
+		<div class='resetPass'>
+				<section id="main" >
+						<input type="text" id="inputResetPass" i18Trans="Email" i18Target="placeholder"/>
+						<button class='btnFull'   i18Trans='Reset' style="margin-top:7%"></button>
+				</section>
+		</div>
+       
+</div>
+
+
+<div  id='help' class='page-content' header='headerGeneral'>
+<div class="settings">
+                    <h1 i18Trans="Help page"></h1>
+				
+                </div><!--close settings-->
+</div>
+
+<div  id='faqs' class='page-content' header='headerGeneral'>
+<div class="settings">
+                    <h1 i18Trans="FAQs page"></h1>
+				
+                </div><!--close settings-->
+</div>
+
+<div  id='about' class='page-content' header='headerGeneral'>
+<div class="settings">
+                    <h1 i18Trans="About page"></h1>
+				
+                </div><!--close settings-->
+</div>
+
+
+
+
+<div  id='services' class='page-content' header='headerEntity'>
+	          <!--close bank section header-->
+            <section id="main" class="productsMain">
+                <nav class="productNav">
+                    <ul>
+                        <li><button disabled><span class="icon-services"></span><text i18Trans="Services"></text></button></li>
+                        <li class="active"><button disabled></button></li>
+                    </ul>
+                </nav><!--close product Nav-->
+                <div class="services serviceList"><div class='scroller'><ul></ul></div></div><!--close products-->
+            </section><!--close main-->
+</div>
+
+<div  id='rules' class='page-content' header='headerEntity'>
+ <section id="main" class="productsMain">
+                <nav class="productNav">
+                    <ul>
+                        <li><button disabled><span class="icon-myAlerts"><span class="path1"></span><span class="path2"></span></span><text i18Trans="My Alerts" ></text></button></li>
+                        <li class="active"><button disabled></button></li>
+                    </ul>
+
+                </nav><!--close product Nav-->
+
+                <div class="products" id="listProducts" >
+				<div class="scroller">
+                    <ul> </ul>
+				</div>
+                </div><!--close products-->
+
+            </section><!--close main-->
+</div>
+<div  id='first-time' class='page-content' header='headerGeneral' headerText="Sign In">
+
+<div class="settings">
+<div class="newUSerWrap">
+<div class="scroller">
+                    <h3 i18Trans="Which email do you want to bond with this Appriz Account?"></h3>
+
+                    <input type="email" i18Trans="Email" i18Target="placeholder"/>
+
+                    <h3 i18Trans="Write a password that it will be used to authenticate this Account?"></h3>
+                    <input type="password" i18Trans="Password" i18Target="placeholder"/>
+                    <input type="password" i18Trans="Rewrite Password" i18Target="placeholder"/>
+
+                    <h3 i18Trans="Write a PIN that will be used to unblock the APP"></h3>
+
+                    <input type="tel" i18Trans="PIN" i18Target="placeholder" maxlength="4"/>
+
+                    <h3 i18Trans="Ask me my PIN only at the start"></h3>
+
+                    <div class="onoffswitch">
+							<input type='checkbox' name='pinPolicyFT' id='pinPolicyFT' class='toggleSetting'><label for='pinPolicyFT'></label>
+					</div>
+
+                    <h3 i18Trans="Keep messages for at least"></h3>
+
+                    <ul class="weeksOption">
+                        <li><input type="radio" name="checkboxG0" id="checkboxG5" class="css-checkbox" value='1'/><label for="checkboxG5" class="css-label"> <span>1</span> <text i18Trans="Week"/></label></li>
+						<li><input type="radio" name="checkboxG0" id="checkboxG6" class="css-checkbox" value='2'/><label for="checkboxG6" class="css-label"> <span>2</span> <text i18Trans="Weeks"/></label></li>
+						<li><input type="radio" name="checkboxG0" id="checkboxG7" class="css-checkbox" value='3'/><label for="checkboxG7" class="css-label"><span>3</span> <text i18Trans="Weeks"/></label></li>
+						<li><input type="radio" name="checkboxG0" id="checkboxG8" class="css-checkbox" value='4'/><label for="checkboxG8" class="css-label"><span>4</span> <text i18Trans="Weeks"/></label></li>
+                    </ul>
+
+
+                    <button class="btnFull" i18Trans="Save"></button>
+</div>
+</div>
+                </div><!--close settings-->
+</div>
+
+
+
+<div  id='suscribe' class='page-content' header='headerGeneral'>
+<div class="settings">
+                    <h1 i18Trans="Please use the couple of numbers given by entity"></h1>
+
+                    <div class="subscribebox">
+                        <h2 i18Trans="Id Code"></h2>
+                        <input type="text"/>
+                        <h2 i18Trans="Subscription No"> </h2>
+                        <input type="tel"/>
+                    </div><!--close subscribe box-->
+
+                    <button class="btnFull" i18Trans="Save"></button>
+
+                </div><!--close settings-->
+</div>
+
+<div  id='demo' class='page-content' header='headerGeneral'>
+<div class="settings">
+                    <h1 i18Trans="Demo is not avaible in Internal Version "></h1>
+					<button class="btnFull" i18Trans="Send demo messages"></button>
+					
+                   
+
+                </div><!--close settings-->
+</div>
+
+<div  id='passwordChg' class='page-content' header='headerGeneral'>
+<div class="settings">
+                    <h1 i18Trans="Change Password"></h1>
+
+                    <div class="subscribebox">
+                        <h2 i18Trans="Password"></h2>
+                        <input type="password" i18Trans="Password" i18Target="placeholder"/>
+                        <h2 i18Trans="Rewrite Password" > </h2>
+                        <input type="password" i18Trans="Rewrite Password" i18Target="placeholder"/>
+                    </div><!--close subscribe box-->
+
+                    <button class="btnFull" i18Trans="Save"></button>
+
+                </div><!--close settings-->
+</div>
+
+<div  id='pinChg' class='page-content' header='headerGeneral'>
+<div class="settings">
+                    <h1 i18Trans="Change pin"></h1>
+
+                    <div class="subscribebox">
+                        <h2 i18Trans="PIN"></h2>
+                        <input type="tel" i18Trans="PIN" i18Target="placeholder"/>
+                       
+                    </div><!--close subscribe box-->
+
+                    <button class="btnFull" i18Trans="Save"></button>
+
+                </div><!--close settings-->
+</div>
+
+<div  id='pin' class='page-content' header='headerEntity'>
+   
+         
+   
+			
+<div id='divPIN'class="fullscreen" style="z-index:99;" >
+
+<h2 i18Trans="Enter your Pin"></h2>
+
+	
+	<div class="passkey"> </div><div class="passkey"></i></div><div class="passkey"></div><div class="passkey"></div>
+	<div style="position: absolute; bottom: 0px;left: 0px; right: 0px;"> 
+	<div class="numKey "> 1 </div><div class="numKey center ">2</div><div class="numKey "> 3 </div>
+	<div class="numKey"> 4 </div><div class="numKey center"> 5 </div><div class="numKey"> 6 </div>
+	<div class="numKey"> 7 </div><div class="numKey center"> 8 </div><div class="numKey"> 9 </div>
+	<div class="numKey" style='opacity: 0.5'></div><div class="numKey center"> 0 </div><div class="delKey" style='opacity: 0.5;  line-height: 200%;'><i class="fa fa-pencil  fa-rotate-180"></i>DEL</div>
+</div>	
+</div>
+    <!--close keyboard Appriz-->
+    <!--close main-->
+</div>
+
+
+
+
+
+</div>
+
+
+
+       <div class="modalAppriz" id="modal2Btn">
+           <div class="bgModal"></div>
+            <div class="boxModal">
+                <h2></h2>
+                <p></p>
+                <ul>
+                    <li>
+                        <button class="yesBtn" i18Trans="Yes"></button>
+                    </li>
+                    <li>
+                        <button class="noBtn" i18Trans="No"></button>
+                    </li>
+                </ul>
+            </div>
+        </div><!--close modal appriz-->
+		
+		<div class="modalAppriz" id="modal1Btn">
+            <div class="bgModal"></div>
+              <div class="boxModal">
+                <h2></h2>
+                <p></p>
+                <button class="okBtn" i18Trans="OK">OK</button>
+            </div><!--close modal-->
+		</div>
+
+
+<script src="http://10.60.0.120:8081/target/target-script-min.js#anonymous"></script>
+<!-- <script src="http://10.50.0.64:8081/target/target-script-min.js#anonymous"></script> -->
+<script type="text/javascript" src="cordova.js"></script>
+
+<!-- Generic Scripts  -->
+<script src="js/whirpool.js"></script>
+<script src="js/globals.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/psudo.js"></script>
+<script src="js/i18next-1.8.0.min.js"></script>
+<script src="js/mobile-events.js"></script>
+<script src="js/velocity.js"></script>
+<script src="js/jqstorage.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/cssfixed.js"></script>
+<script src="js/generics.js"></script>
+<script src="js/files.js"></script>
+<script src="js/pushNotification.js"></script>
+<script src="js/iscroll-probe.js"></script>
+
+<!--pages Scripts -->
+<script src="js/ads.js"></script>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+<script src="js/entity.js"></script>
+<script src="js/messages.js"></script>
+<script src="js/messageDetail.js"></script>
+<script src="js/products.js"></script>
+<script src="js/rules.js"></script>
+<script src="js/services.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/subscription.js"></script>
+<script src="js/pin.js"></script>
+<script src="js/firstTime.js"></script>
+<script src="js/start.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>

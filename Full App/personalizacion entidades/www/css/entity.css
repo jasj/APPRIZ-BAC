@@ -1,0 +1,172 @@
+nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
+	color : #ED1A2D;
+}
+
+
+.bankSection {
+	background: white;
+	  border-bottom: 2px solid 	#ED1A2D;
+}
+
+
+
+.topHeader {
+  background: #ED1A2D;
+
+}
+
+
+.magicalArrow{
+	color: #5E5E5E;
+}
+
+#categories li .infoBank h2 {
+	color : #444444;
+}
+
+.unread{
+	color: #ED1A2D;
+}
+#categories li .icon-arrow .path1::before {
+	color : #ED1A2D;
+}
+
+#categories li .icon-myAlerts .path1::before, .icon-notifications, .icon-alerts, .icon-promotions, .icon-services {
+	color :#ED1A2D;
+}
+
+.contentMenu ul li button:hover .icon-myAlerts .path1:before {
+   color : #ED1A2D;
+}
+
+
+
+nav.categoryNav {
+      background: none repeat scroll 0% #5e5e5e;
+  border-top: 1px solid black;
+  /* height: 35px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#entities .newEntity {
+	background: none repeat scroll 0% 0% #ED1A2D;
+}
+
+#categories .details h3, .details_ h3 {
+    color: #ED1A2D;
+}
+
+
+
+nav.categoryNav .icon-myAlerts.active .path1:before {
+    content: "\e60b";
+    color: #ED1A2D;
+
+}
+
+nav.categoryNav span.active:before {
+    color: #ED1A2D;
+}
+
+
+.options .optionBtn {
+    background: #ED1A2D;
+}
+
+.options .btnBank2:hover {
+    background: #ED1A2D;
+}
+
+.dropdownOption ul li {
+    border-bottom: 1px solid #005B99 !important;
+}
+
+.oneOption {
+	color: #ED1A2D;
+}
+
+nav.navAppriz ul li.active a {
+    color: #ED1A2D;
+
+}
+
+nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
+    color: #ED1A2D;
+}
+
+.contentMenu ul li button:hover .icon1 {
+    color: #ED1A2D;
+
+}
+
+.products ul li button , .services ul li button{
+	color: #ED1A2D;
+}
+
+.products h3 {
+    color: #4C4C4C;
+}
+
+nav.categoryNav span {
+    content: "\e60b";
+	color: #D5D4D3;
+    /*color: rgb(85, 185, 73);*/
+}
+.services srv{
+    color: #4C4C4C;
+
+}
+
+
+nav.categoryNav span.active{
+    content: "\e60b";
+	color: #ED1A2D;
+    /*color: rgb(85, 185, 73);*/
+}
+
+.editOption li input {
+	color: #ED1A2D;
+}
+
+.editOption li select{
+	color: #ED1A2D;
+}
+
+.products ul li button .icon-arrow .path1::before, .services ul li button .icon-arrow .path1::before {
+	color: #ED1A2D;
+}
+
+.productNav li.active button{
+	color: #ED1A2D;
+}
+
+.productNav .icon-myAlerts .path1::before {
+	color: #ED1A2D;
+}
+
+input.toggle:checked + label::before {
+	 background: #ED1A2D;
+}
+
+.productNav li button{
+	 background: #C4C4C4;
+}
+
+
+
+#colorHandle{
+	display : none;
+	color: ED1A2D;
+}
+
+.bankLogo img{
+	margin-top: 24px;
+	  margin-left: -7px;
+}
+
+* {
+
+-webkit-tap-highlight-color: rgba(0,0,0,0); 
+
+}

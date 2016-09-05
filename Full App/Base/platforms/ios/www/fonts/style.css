@@ -1,0 +1,128 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-glj28s');
+	src:url('fonts/icomoon.eot?#iefix-glj28s') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-glj28s') format('woff'),
+		url('fonts/icomoon.ttf?-glj28s') format('truetype'),
+		url('fonts/icomoon.svg?-glj28s#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow .path1:before {
+	content: "\e614";
+	color: rgb(79, 81, 84);
+}
+.icon-arrow .path2:before {
+	content: "\e615";
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+
+.icon-alerts:before {
+	content: "\e600";
+}
+
+.icon-back:before {
+	content: "\e601";
+}
+
+.icon-delete:before {
+	content: "\e602";
+}
+
+.icon-demo:before {
+	content: "\e603";
+}
+
+.icon-entities:before {
+	content: "\e604";
+}
+
+.icon-iconAppriz .path1:before {
+	content: "\e605";
+	color: rgb(161, 41, 149);
+}
+.icon-iconAppriz .path2:before {
+	content: "\e606";
+	margin-left: -1em;
+	color: rgb(238, 152, 9);
+}
+.icon-iconAppriz .path3:before {
+	content: "\e607";
+	margin-left: -1em;
+	color: rgb(149, 200, 7);
+}
+
+.icon-lock:before {
+	content: "\e608";
+}
+
+.icon-logOut:before {
+	content: "\e609";
+}
+
+.icon-menu:before {
+	content: "\e60a";
+}
+
+.icon-myAlerts .path1:before {
+	content: "\e60b";
+	color: rgb(214, 213, 212);
+}
+.icon-myAlerts .path2:before {
+	content: "\e60c";
+	margin-left: -1em;
+	color: rgb(238, 152, 9);
+}
+
+.icon-notifications:before {
+	content: "\e60d";
+}
+
+.icon-pencil:before {
+	content: "\e60e";
+}
+
+.icon-promotions:before {
+	content: "\e60f";
+}
+
+.icon-pushcenter:before {
+	content: "\e610";
+}
+
+.icon-services:before {
+	content: "\e611";
+}
+
+.icon-settings:before {
+	content: "\e612";
+}
+
+.icon-user:before {
+	content: "\e613";
+}
+
+.icon-primitive-dot:before {
+	content: "\f052";
+}
+
+.icon-cross:before {
+	content: "\ea0f";
+}
+

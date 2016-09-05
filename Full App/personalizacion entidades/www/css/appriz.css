@@ -1,0 +1,20 @@
+.header_demo{
+		background-color: #222;
+}
+
+.message{
+	background-color : white;
+}
+
+.message.unread{
+	background-color: #E7EBFF !important;
+	border-color: 2px solid #B6C7EC !important;	      		
+}
+
+.internal_header{
+	background:  #F9A11B !important;
+}
+
+.internal_header p{
+	color: white;
+}
