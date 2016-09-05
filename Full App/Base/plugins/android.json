@@ -1,0 +1,50 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "670801368646",
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.smartsoft.apprizdev"
+        }
+    }
+}

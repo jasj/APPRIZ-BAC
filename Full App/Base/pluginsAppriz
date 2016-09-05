@@ -1,0 +1,17 @@
+cordova plugin add https://github.com/phonegap-build/PushPlugin.git
+
+
+cordova plugin add cordova-plugin-x-toast
+cordova plugin add cordova-plugin-device
+cordova plugin add cordova-plugin-device-orientation
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-file
+cordova plugin add cordova-plugin-file-transfer
+cordova plugin add cordova-plugin-inappbrowser
+cordova plugin add cordova-plugin-network-information
+cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
+
+cordova plugin add phonegap-plugin-push --variable SENDER_ID="670801368646"
+
+
+cordova prepare
