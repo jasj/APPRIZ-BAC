@@ -14,7 +14,7 @@ function matchColumnsHeight(){
 }
 
 function showMessage(id){
-	
+	$('header .icon-back').css("color", "#FFFFFF" );
 	scrollPosition = myScroll3.y;
 //console.log("scroll y "+myScroll3.y);
 //myScroll3.scrollTo(0, )

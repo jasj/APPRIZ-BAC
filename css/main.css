@@ -507,14 +507,14 @@ a {
 
 
 header.loginHead {
-    background: #ED1A2D; /* Old browsers */
-    background: -moz-linear-gradient(left, #ED1A2D 17%, #ED1A2D 17%, #636466 17%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(17%, #ED1A2D), color-stop(17%, #ED1A2D), color-stop(17%, #636466)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #ED1A2D 17%, #ED1A2D 17%, #636466 17%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #ED1A2D 17%, #ED1A2D 17%, #636466 17%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #ED1A2D 17%, #ED1A2D 17%, #636466 17%); /* IE10+ */
-    background: linear-gradient(to right, #ED1A2D 17%, #ED1A2D 17%, #636466 17%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ED1A2D', endColorstr='#636466', GradientType=1); /* IE6-9 */
+    background: #1A6BA3; /* Old browsers */
+    background: -moz-linear-gradient(left, #1A6BA3 17%, #1A6BA3 17%, #636466 17%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(17%, #1A6BA3), color-stop(17%, #1A6BA3), color-stop(17%, #636466)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #1A6BA3 17%, #1A6BA3 17%, #636466 17%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #1A6BA3 17%, #1A6BA3 17%, #636466 17%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #1A6BA3 17%, #1A6BA3 17%, #636466 17%); /* IE10+ */
+    background: linear-gradient(to right, #1A6BA3 17%, #1A6BA3 17%, #636466 17%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A6BA3', endColorstr='#636466', GradientType=1); /* IE6-9 */
     height: 92px;
 }
 
@@ -525,7 +525,7 @@ header {
     background: -webkit-linear-gradient(left, #FFFFFF 17%, #FFFFFF 17%, #636466 17%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(left, #FFFFFF 17%, #FFFFFF 17%, #636466 17%); /* Opera 11.10+ */
     background: -ms-linear-gradient(left, #FFFFFF 17%, #FFFFFF 17%, #636466 17%); /* IE10+ */
-    background: linear-gradient(to right, #ED1A2D 17%, #FFFFFF 17%, #636466 17%); /* W3C */
+    background: linear-gradient(to right, #1A6BA3 17%, #FFFFFF 17%, #636466 17%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#636466', GradientType=1); /* IE6-9 */
     height: 92px;
     position: fixed;
@@ -539,7 +539,7 @@ header {
 
 header .icon-back {
     display: block;
-    color: #ED1A2D;
+       color: #003885 !important;
     font-size: 30px;
     width: 17%;
     float: left;
@@ -569,7 +569,7 @@ header .icon-menu {
 
 .bankSection .icon-menu {
   border: none;
-  color: #ED1A2D;
+         color: #003885 !important;
   font-size: 32PX;
   background: none;
   line-height: 76px;
@@ -661,12 +661,12 @@ input, .btnAction {
 }
 
 .btnAction .icon-arrow .path1 {
-    color: #ED1A2D;
+    color: #1A6BA3;
 }
 
 .btnAction .icon-arrow .path1:before {
     content: "\e614";
-    color: #ED1A2D;
+    color: #1A6BA3;
 }
 
 
@@ -692,7 +692,7 @@ input, .btnAction {
 }
 
 .btnFull {
-    background: #ED1A2D;
+    background: #1A6BA3;
     color: #FFFFFF;
     width: 100%;
     text-transform: uppercase;
@@ -849,9 +849,9 @@ label.css-label {
 
 .numberCode li input {
     background: none;
-    border-bottom: 5px solid #ED1A2D;
+    border-bottom: 5px solid #1A6BA3;
     font-size: 30px;
-    color: #ED1A2D;
+    color: #1A6BA3;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -866,7 +866,7 @@ label.css-label {
 }
 
 #keyboardAppriz .numKey, #keyboardAppriz .numKeyC {
-       color: #ED1A2D;
+       color: #1A6BA3;
     font-size: 3em;
     border: 1px solid #9C9D9E;
     width: 32% !important;
@@ -881,7 +881,7 @@ label.css-label {
 }
 
 #keyboardAppriz .icon-delete {
-     color: #ED1A2D;
+     color: #1A6BA3;
     font-size: 50px;
     display: block;
 }
@@ -1418,15 +1418,30 @@ nav.categoryNav .icon-myAlerts.active .path2:before {
     padding: 4% 0 0 0;
 }
 
+#iContainer{
+    height: 60px;
+    position: absolute;
+    width: 74px;
+    top: 9px;
+	margin-left: 22px;
+}
+
+#headLogoC{
+    height: 76px;
+    width: 241px;
+    margin-left: 67px;
+    position: absolute;
+}
+
 .topHeader .userInfo {
     float: right;
     width: 50%;
     text-align: center;
-    color: white;
+    color: #005b99;
 }
 
 .topHeader .userInfo .welcome {
-  color: #FFFFFF;
+  color:#005b99;
     font-weight: 100;
     font-size: 18px;
     margin: 0;
@@ -1440,7 +1455,7 @@ nav.categoryNav .icon-myAlerts.active .path2:before {
 }
 
 .topHeader .userInfo .icon-user {
- color: #FFFFFF;
+ color: #005b99;
     font-size: 35px;
     display: inline-block;
     padding: 6px 0 0 0;
@@ -1704,12 +1719,12 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 }
 
 .boxModal .okBtn {
-    background: #ED1A2D;
+    background: #1A6BA3;
     margin: 0 auto;
 }
 
 .boxModal .yesBtn {
-    background: #ED1A2D;
+    background: #1A6BA3;
     margin: 0 auto;
 }
 
@@ -2249,7 +2264,7 @@ top: 0px;
 
     .bankSection .icon-menu {
         font-size: 32px;
-        line-height: 91px;
+           line-height: 69px;
 
     }
 
@@ -2454,7 +2469,7 @@ img.bankLogo {
     max-width: calc(100% - 100px) !important;
 }
 .bankLogo img{
-	max-height:80px;
+	    max-height: 70px;
 }
 
 .menu-main {
@@ -2748,7 +2763,7 @@ transition: .25s ease-in-out;
 
 input.toggleSetting:checked + label:before {
 width: 60px;
-background: #ED1A2D;
+background: #1A6BA3;
 }
 
 input.toggleSetting:checked + label:after {
@@ -2814,7 +2829,7 @@ bottom: 35px;
 text-align: center;
 left: 10px;
 right: 10px;
-color: #ED1A2D;
+color: #1A6BA3;
 font-size: 16px;
 
 }

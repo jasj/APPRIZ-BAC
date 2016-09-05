@@ -87,8 +87,8 @@
 	$( document ).on("tapend","a.icon-back", function(){
 		
 				
-			$('header .icon-back').css("color", "#ED1A2D" );
-			$('header .icon-menu').css("color", "#ED1A2D" );
+			$('header .icon-back').css("color", "#FFFFFF" );
+			$('header .icon-menu').css("color", "#FFFFFF" );
 		
 		if(!$.isEmptyObject(rulesChanges)){
 				showAlert($.t("Rule Changed"), $.t("Do you want to save changes?") , function(){
@@ -137,8 +137,8 @@
 //Special elements:
 
 $( document ).on("tapend",'.imglogo',function(e){
-	$('header .icon-back').css("color", "#ED1A2D" );
-    $('header .icon-menu').css("color", "#ED1A2D" );
+	$('header .icon-back').css("color", "#FFFFFF" );
+    $('header .icon-menu').css("color", "#FFFFFF" );
 });
 
 $( document ).on("click",'input + label',function(e){
@@ -160,8 +160,8 @@ androidBackBtn = 0;
 function backKeyDown() { 
 		
 		
-		$('header .icon-back').css("color", "#ED1A2D" );
-		$('header .icon-menu').css("color", "#ED1A2D" );
+		$('header .icon-back').css("color", "#FFFFFF" );
+		$('header .icon-menu').css("color", "#FFFFFF" );
 		
 		if($('.page-content.active').attr('id') == "inbox"){
 			navigator.app.exitApp();

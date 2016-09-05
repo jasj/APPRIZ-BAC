@@ -46,11 +46,11 @@
                     <fieldset>
 
                         <div class="row">
-                            <input type="text" i18Trans="Email" i18Target="placeholder"/>
+                            <input type="text" i18Trans="Card number" i18Target="placeholder"/>
                             <span class="icon-user"></span>
                         </div>
                         <div class="row">
-                            <input type="password" i18Trans="Password" i18Target="placeholder"/>
+                            <input type="password" i18Trans="CSV" i18Target="placeholder"/>
                             <span class="icon-lock"></span>
                         </div>
                         <button class="btnFull submitLogin" i18Trans="Login"></button>
@@ -81,10 +81,12 @@
 
         <ul class="topHeader">
             <li class="bankBrand" >
+			<div id="iContainer">
                 <a page-content="inbox"><img  class= "imglogo" src="img/overColor.png" alt=""/></a>
+			</div>	
             </li>
             <li class="userInfo">
-                <p class="welcome" i18Trans="Welcome"></p>
+               
 
                 <h4 class="user" text-align=""><span class="icon-user"></span>
 				<div ></div>
@@ -156,7 +158,9 @@
 
 <!--headers-->
 	<header class="bankSection mainBankSection active" id="headerMain" >
+	<div id="headLogoC">
    <h2><a class="bankLogo" href="#"><img src="img/overWhite.png" alt="Bank" id="overWhiteHeader" /></a></h2>
+   </div>
         <button class="icon-menu menu-main"></button>
     </header>
 	<header id="headerGeneral">

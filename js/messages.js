@@ -22,7 +22,7 @@ function current_inbox(){
 	checkWithOutEntity();
 	if(currentEntityID>0)
 	{
-	//getAds();
+	getAds();
 	} //----> ERROR
 	
 			if($('.Message:visible').length===0){$('#noMessage').show();} else{$('#noMessage').hide();}
@@ -512,10 +512,13 @@ $('#categories').html("<div class='MsG'></div>");
 						if(/^<html>/.test(LONG_MSG)){
 							LONG_MSG = $.t("This message contains rich content");
 						}
+						try{
 						$('#categories .MsG').prepend( "<li class='Message "+( message['state'] < 3 ? "unread" : "" )+" typemsg"+message['type']+" entity"+message['idEntity']+"' id='"+message['idMessage']+"' bulb='"+message['bulb']+"' longMSG='"+btoa(message['longMessage'])+"' services='"+btoa(JSON.stringify(message['services']))+"' appends='"+btoa(JSON.stringify(message['appends']))+"' idEntity='"+message['idEntity']+"'><div class='moveContainer'><div class='details'><h3>"+LONG_MSG+"</h3></div><div class='centralLI'><div class='iconCat'>"+Icon+"</div><div class='infoBank'><h2>"+message['shortMessage']+"</h2><h6 class='dateBank'><span class='icon-primitive-dot "+dotState+"'></span><date>"+postDateS+"<date></h6></div><div class='magicalArrow'><i class='fa fa-angle-right'></i></div></div><div class='rightLI'><button class='deleteSwipe'>Delete</button></div ></div></li>");
 						
 						$.jStorage.set('msg_div', btoa($('#categories').html()));
-					
+						}catch(e){
+							console.error(e);
+						}
 						//console.log(JSON.stringify(data));
 					}
 					}

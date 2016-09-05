@@ -1,8 +1,8 @@
 <?xml version='1.7' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-	<name>BAC Link</name>
+	<name>APPRIZ BCR</name>
     <description>
-       Alpha version of ApprizPG
+       Alpha version of BCR
     </description>
     <author email="asegreda@smartsoftint.com" href="http://smartsoftint.com">
         Appriz Team
