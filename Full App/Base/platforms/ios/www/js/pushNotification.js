@@ -1,8 +1,16 @@
+function testtingOk(data){
+    if( typeof(data) != 'undefined' )
+        alert(data.additionalData.msg);
+}
+function testtingCancel(data){
+    if( typeof(data) != 'undefined' )
+        alert(data.additionalData.msg);
+}
 var pushNotification;
-
+var www;
 var push = {
 
-    googleSenderID: '670801368646',
+    googleSenderID: '676428910880',
 
     init: function() {
         console.log('push.init');
@@ -54,11 +62,13 @@ var push = {
     onNotification: function(data) {
         console.log("push.on('notification'");
         // callMSGback();
-        console.debug(data);
+        // console.debug(data);
         if ( device.platform == 'android' || device.platform == 'Android' ) { 
-            push.onNotificationAndroid();
+            console.log('and');
+            push.onNotificationAndroid(data);
         } else if ( device.platform == "iOS" || device.platform == "ios" || device.platform == "IOS") { 
-            push.onNotificationIOs();
+            console.log('ios');
+            push.onNotificationIOs(data);
         } 
 
         
@@ -103,9 +113,10 @@ var push = {
 
     onNotificationAndroid: function(data) { 
         console.log('push.onNotificationAndroid');
-        callMSGback();
+        // callMSGback();
+        www = data;
         window.plugins.toast.showLongBottom(
-            data.payload.message, 
+            data.message, 
             function(a) { 
                 console.log('toast success: ' + a);
             }, 

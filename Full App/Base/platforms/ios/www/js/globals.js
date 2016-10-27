@@ -4,7 +4,6 @@
 		Author: Juan Andres Segreda Johanning
 		
 */
-	alert('xchange');
 	var scrollInProgress=false;
 	var spinnerOff=true;
 	var scrollPosition=0;

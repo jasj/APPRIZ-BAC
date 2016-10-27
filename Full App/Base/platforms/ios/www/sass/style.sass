@@ -1,0 +1,36 @@
+//
+//
+// Appriz App movil
+// Version 4.0
+//
+//
+
+// Variables, Mixins
+@import "variables"
+@import "mixins"
+
+@import "base"
+
+// Unknown Styles App
+@import "unknown"
+
+// Next styles
+@import "typography"
+@import "navigation"
+@import "buttons"
+@import "elements"
+@import "pages"
+@import "sections"
+
+@import "theme-config"
+@import "media"
+
+@import "custom"
+
+// Clear layout on print mode
+@media print
+  nav.navbar-static-side
+    display: none
+
+  #page-wrapper
+    margin: 0

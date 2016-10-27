@@ -1,0 +1,1516 @@
+/* ==========================================================================
+ * on off btns styles Aprriz app
+ * ==========================================================================
+
+.onoffswitch
+  position: relative
+  width: 70px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+.onoffswitch-checkbox
+  display: none
+
+.onoffswitch-label
+  display: block
+  overflow: hidden
+  cursor: pointer
+  border-radius: 20px
+
+.onoffswitch-inner
+  display: block
+  width: 200%
+  margin-left: -100%
+  @include prefixer(transition, (margin 0.3s ease-in 0s), (webkit, moz, ms, o, spec)) 
+  
+  &:before, &:after
+    display: block
+    float: left
+    width: 50%
+    height: 30px
+    padding: 0
+    line-height: 30px
+    font-size: 14px
+    color: $white
+    font-family: Trebuchet, Arial, sans-serif
+    font-weight: bold
+    @include prefixer(box-sizing, (border-box), (webkit, moz, ms, o, spec)) 
+    
+  &:before
+    content: attr(leyend)
+    padding-left: 10px
+    background-color: $skyBlueDarken
+    color: $white
+
+  &:after
+    content: "OFF"
+    padding-right: 10px
+    background-color: $grayReddish
+    color: $grayBluish
+    text-align: right
+
+.onoffswitch-switch
+  display: block
+  width: 19px
+  margin: 5.5px
+  background: $grayBluish
+  border-radius: 25px
+  position: absolute
+  top: 0
+  bottom: 0
+  @include prefixer(transition, (all 0.3s ease-in 0s), (webkit, moz, ms, o, spec)) 
+
+.onoffswitch-checkbox:checked + .onoffswitch-label
+
+  .onoffswitch-inner
+    margin-left: 0
+
+  .onoffswitch-switch
+    right: 0px
+    background: $white
+
+input
+  background: $grayLight_2
+  border: none
+  width: 100%
+  font-size: 1.1em
+  line-height: 60px
+  margin: 0 0 2% 0
+  padding: 0 2% 0 2%
+  color: $grayDark_4
+
+.btnAction
+  background: $grayLight_2
+  border: none
+  width: 100%
+  font-size: 1.1em
+  line-height: 60px
+  margin: 0 0 2% 0
+  padding: 0 2% 0 2%
+  color: $grayDark_4
+  text-align: left
+  position: relative
+
+  .icon-arrow
+    position: absolute
+    right: -4px
+    font-size: 69px
+    top: -5px
+
+    .path1
+      color: $red-1
+
+      &:before
+        content: "\e614"
+        color: $red-1
+
+.icon-lock
+  color: $grayBluish
+  position: absolute
+  right: 13px
+  z-index: 1000
+  top: 23px
+  font-size: 25px
+
+.btnFull
+  background: $red-1
+  color: $white
+  width: 100%
+  text-transform: uppercase
+  line-height: 50px
+  border: none
+  font-size: 1.2em
+  margin-bottom: 5px
+  
+  &:hover
+    background: $gray
+
+.submitLogin
+  margin: 7% 0 0 0
+  width: 100%
+
+.newUserlink
+  color: $grayDark_2
+  font-size: 30px
+  text-align: center
+  display: block
+  padding: 1% 0 0 0
+  
+  &:hover
+    color: $grayDark_5
+
+.settings
+  width: 100%
+  padding: 0 0 5% 0
+  
+  h1
+    color: $grayDark_2
+    text-align: center
+    width: 80%
+    margin: 0 auto
+    padding: 4% 0 4% 0
+  
+  h3
+    color: $grayDark_2
+    font-weight: 300
+
+.subscribebox
+  width: 100%
+  padding: 0 0 10% 0
+  overflow: hidden
+
+  h2
+    font-weight: normal
+    color: $grayDark_2
+    font-size: 1.2em
+
+.weeksOption
+  overflow: hidden
+  width: 100%
+  padding: 0 0 10% 0
+  
+  li
+    list-style: none
+    float: left
+    background: $grayLight_2
+    margin: 0 5% 0 0
+    padding: 1%
+  
+    span
+      color: $white
+      display: inline-block
+      margin: 0 6px 0 0
+
+/*Inputs check weeks styles
+
+input[type=radio].css-checkbox
+  position: absolute
+  z-index: -1000
+  left: -1000px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+  + label.css-label
+    padding-left: 8px
+    height: 22px
+    display: inline-block
+    line-height: 22px
+    background-repeat: no-repeat
+    background-position: -28px -8px
+    font-size: 22px
+    vertical-align: middle
+    cursor: pointer
+
+  &:checked + label.css-label
+    background-position: -374px 0px
+
+  + label.css-label
+    background-position: 1px 0px
+    font-size: 18px
+    color: $grayDark_2
+    font-weight: normal
+
+label.css-label
+  background-image: url($square)
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.numberCode
+  margin: 0 auto
+  padding: 0 0 13% 0
+  overflow: hidden
+  width: 90%
+
+  li
+    float: left
+    width: 20%
+    margin: 0 5% 0 0
+
+    &:last-child
+      margin: 0
+
+    input
+      background: none
+      border-bottom: 5px solid $red-1
+      font-size: 30px
+      color: $red-1
+      text-align: center
+      margin: 0
+      padding: 0
+
+#keyboardAppriz
+  background: $grayLight_5
+  width: 100%
+  overflow: hidden
+  border: 1px solid $grayMedium_2
+  height: 98%
+  .numKey, .numKeyC
+    color: $red-1
+    font-size: 3em
+    border: 1px solid $grayMedium_2
+    width: 32% !important
+    text-align: center
+    line-height: 100px
+    height: 50px !important
+    float: left
+  .last
+    text-indent: -9999999px
+  .icon-delete
+    color: $red-1
+    font-size: 50px
+    display: block
+.bankSection
+  background: $grayMedium_2
+
+.mainBankSection
+  height: 100px
+
+.bankSection h2 a
+  display: block
+  float: right
+  width: 68%
+  padding: 13px 0 0 0
+
+.mainBankSection h2
+  width: 89%
+
+  a
+    display: block
+    float: right
+    width: 58%
+
+#wrapper_message
+  margin-top: 69px
+
+.pullDown
+  background: $white
+  height: 91px
+  line-height: 40px
+  font-size: 0.9em
+  color: $blackLight
+  display: table
+  margin: 0 auto
+  margin-bottom: -44px
+  overflow: hidden
+
+.fa-3x
+  font-size: 3em
+  width: 42px
+
+#wrapper_message
+  height: 400px
+
+#categories
+  margin: 0
+  padding: 0
+  width: 100%
+  z-index: 900
+
+  li
+    width: 100%
+    overflow: hidden
+    height: 84px
+    border-bottom: 1px solid $grayLight_6
+    padding: 2% 0 0 0
+    position: relative
+
+    &:first-child
+      border-top: 1px solid $grayLight_6
+
+    .infoBank
+      float: left
+      width: calc(80.5% - 150px)
+      height: 92px
+      position: relative
+
+    .iconCat
+      float: left
+      width: 100px
+      display: inline-block
+      padding: 0 0 0 30px
+      line-height: 3.5 !important
+
+    .icon-myAlerts
+      font-size: 32px
+
+.icon-notifications, .icon-alerts, .icon-promotions, .icon-services
+  font-size: 32px
+
+#categories li .icon-myAlerts .path1:before, .icon-notifications, .icon-alerts, .icon-promotions, .icon-services
+  content: "\e60b"
+  color: $skyBlueDarken
+
+#categories li p
+  color: $grayMedium_3
+  font-size: 14px
+  margin: 0
+
+.dateBank
+  color: $grayMedium_3
+  font-size: 0.8em
+  width: 100%
+  font-weight: lighter
+  margin: 0
+  padding: 1% 0 0 0
+  position: absolute
+  bottom: 4px
+  margin-left: -2em
+
+  .icon-primitive-dot
+    font-size: 30px
+    padding: 0 2% 0 0
+    display: inline-block
+    margin: -7px 0 0 0
+    float: left
+
+.detailCategory
+  width: 96%
+  padding: 2%
+
+.deleteSwipe
+  background: $red-2
+  color: $white
+  font-size: 1.04em
+  text-transform: uppercase
+  border: none
+  margin-left: 22px
+  z-index: 2000
+  right: 0
+  height: 106%
+  width: 150px
+  top: 0
+  opacity: 0.98
+
+#categories
+
+  li
+    &:first-child .icon-arrow
+      top: 0
+
+  .icon-arrow
+    border: none
+    background: none
+    position: absolute
+    z-index: 1000
+    top: 16px
+
+    .path1:before
+      content: "\e614"
+      color: $skyBlueDarken
+      font-size: 40px
+
+    .path2:before
+      content: "\e615"
+      margin-left: -1em
+      color: $white
+      font-size: 40px
+
+  .infoBank h2
+    color: $skyBlueDarken
+    font-size: 0.73em
+    font-weight: 600
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 100%
+    word-wrap: break-word
+    max-height: 3.2em
+    line-height: 21px
+    margin-left: -2em
+
+  .details
+    background: $grayLight_3
+    width: 100%
+    position: absolute
+    top: -22%
+    left: 0px
+    width: calc(100% - 20px)
+    height: 124px
+    padding: 20px
+
+  .centralLI
+    position: absolute
+    top: 0px
+    left: calc(100% + 20px)
+    width: calc(100% + 150px)
+
+  .rightLI
+    position: absolute
+    top: -22%
+    height: 104px
+    left: 200%
+    width: 150px
+
+  .moveContainer
+    position: relative
+    width: 100%
+    left: calc(-100% - 21px)
+    overflow: visible
+    height: 84px
+
+  .details h3
+    color: $skyBlueDarken
+    margin: 0
+    font-size: 0.8em
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 96%
+    word-wrap: break-word
+    max-height: 5.6em
+    line-height: 16px
+    padding: 3% 4% 3% 4%
+
+  li:first-child .details h3
+    padding: 5% 4% 3% 4%
+
+  .details .dateBank
+    padding-top: 2%
+
+#ads2
+  position: relative
+  width: 100%
+  z-index: 1999
+  margin: 0 auto
+
+#deleteAllBtn
+  height: 40px
+  padding: 10px
+  color: $white
+  font-weight: 1000
+  text-align: center
+  background: $red-2
+  display: none
+  width: 100%
+  z-index: 1999
+  bottom: 0px
+  left: 0px
+  right: 0px
+  position: absolute
+  border-top: 1px solid
+
+#ads2 .icon-cross
+  color: $grayDark_2
+  font-size: 14px
+  border: none
+  background: none
+  position: absolute
+  right: 0
+  top: 10px
+
+.fullWrapper
+  position: fixed
+  z-index: 2000
+  bottom: 0
+  width: 100%
+
+.detailCategory .details h3
+  padding: 2% 0 0 0
+
+.line
+  padding: 0
+  border-top: 1px solid $grayLight_6
+  margin: 5% 0 0 0
+
+.detailsList
+  border-bottom: 1px solid $grayLight_6
+  width: 100%
+  overflow: hidden
+  padding: 5px
+
+  .row
+    float: left
+    width: 69%
+    padding: 2%
+
+    &:first-child
+      width: 22%
+      overflow: auto
+    
+    h4
+      text-align: right
+      line-height: 9px
+      white-space: nowrap
+
+  h4
+    font-weight: bold
+    color: $skyBlueDarken
+
+  .row p
+    line-height: 15px
+
+.options
+  margin: 4% 0 5% 0
+  width: 100%
+
+  .optionBtn
+    background: $skyBlueDarken
+    font-size: 1.6em
+    color: $white
+    border: none
+    line-height: 50px
+    width: 88%
+    margin: 0 auto
+    display: block
+
+  .btnBank2
+    background: $grayLight_3
+    color: $white
+
+    &:hover
+      background: $skyBlueDarken
+
+.dropdownOption
+  background: $grayLight_6
+  width: 88%
+  padding: 0 0 4% 0
+
+  ul
+    margin: 0
+    padding: 0
+
+    li
+      border-bottom: 1px solid $skyBlueDarken !important
+      height: 50px !important
+      line-height: 45px
+      width: 98% !important
+      margin: 0 auto
+
+      &:first-child
+        padding-top: 2% !important
+
+      .icon-arrow
+        top: 18% !important
+        right: 2%
+
+.oneOption
+  color: $skyBlueDarken
+  font-size: 1.1em
+  border: none
+  background: none
+
+.bubble
+  background: $grayLight_3
+  height: 15px
+  width: 15px
+  border-radius: 360px 360px 360px 0
+  position: absolute
+  top: 3%
+  left: 31%
+  z-index: 1000
+  font-size: 10px
+  text-align: center
+
+.modalAppriz
+  position: fixed
+  width: 100%
+  z-index: 10000
+  height: 100%
+  top: 0px
+  left: 0px
+  right: 0px
+  bottom: 0px
+  display: none
+
+#menuAppriz
+  display: none
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  z-index: 3000
+
+.allMenu
+  background: $white
+  width: 80%
+  height: 100%
+  position: absolute
+  top: 0px
+  right: -80%
+  z-index: 4000
+
+.bgModal
+  width: 100%
+  height: 100%
+  background: #000
+  opacity: 0.6
+
+.navAppriz button
+  font-size: 50px
+  border: none
+  background: none
+
+.topHeader
+  background: $skyBlueDarken
+  margin: 0
+  overflow: hidden
+  padding: 1% 3% 1% 3%
+  height: 80px
+  border-bottom: 2px solid $grayMedium
+
+  .bankBrand
+    float: left
+    width: 46%
+    padding: 4% 0 0 0
+
+  .userInfo
+    float: right
+    width: 50%
+    text-align: center
+    color: $white
+
+    .welcome
+      color: $white
+      font-weight: 100
+      font-size: 18px
+      margin: 0
+
+    .user
+      font-size: 20px
+      margin: 0
+      padding: 0
+      line-height: 50px
+
+    .icon-user
+      color: $white
+      font-size: 35px
+      display: inline-block
+      padding: 6px 0 0 0
+      float: left
+
+nav.navAppriz
+  overflow: hidden
+  width: 100%
+  border-bottom: 1px solid $grayLight_6
+
+  ul
+    overflow: hidden
+    width: 100%
+    padding: 0 0 0 10%
+    margin-bottom: 0
+
+    li
+      float: left
+      width: 33.33%
+
+      &.active a
+        color: $skyBlueDarken
+
+      a
+        border: 0
+        background: none
+        font-size: 50px
+        display: block
+        color: $grayDark_2
+
+      &.active a, a:hover
+        color: $skyBlueDarken
+
+.contentMenu
+  width: 100%
+
+  ul
+    margin: 0
+    padding: 0 0 3% 0
+
+    li
+      width: 100%
+      height: 60px
+      position: relative
+
+      button
+        font-size: 1.2em
+        display: block
+        color: $grayDark_2
+        width: 100%
+        text-align: left
+        padding: 0 0 0 6%
+        line-height: 70px
+        background: white
+        border: none
+
+        .icon1
+          font-size: 40px
+          float: left
+          margin: 15px 9px 0 0
+          color: $grayLight_3
+
+        &:hover .icon-myAlerts .path1:before
+          content: "\e60b"
+          color: $skyBlueDarken_2
+
+        .icon-myAlerts:hover
+          color: $skyBlueDarken_2
+
+        &.active
+          background: $grayDark_2
+          color: $white
+
+          .icon1
+            content: "\e60b"
+            color: $skyBlueDarken_2
+          
+        &:hover
+          background: $grayDark_2
+          color: $white
+
+          .icon1
+            color: $skyBlueDarken
+
+      .deleteSwipe
+        background: $red-2
+        color: $white
+        font-size: 1.04em
+        text-transform: uppercase
+        border: none
+        position: absolute
+        z-index: 2000
+        right: -72%
+        height: 100%
+        width: 72%
+        top: 0
+        opacity: 0.98
+        text-align: center
+
+        &:hover
+          background: $red-2
+
+#entities
+  width: 100%
+  margin-bottom: 10%
+  overflow-y: scroll
+  height: 100%
+
+  ul
+    padding: 0 0 4% 0
+    width: 100%
+
+    li
+      overflow: hidden
+      width: 98%
+      position: relative
+      border-bottom: 1px solid $grayLight_6
+      padding: 1%
+
+  .bubble2
+    border: 2px solid $grayLight_3
+    height: 25px
+    width: 25px
+    border-radius: 360px
+    position: absolute
+    top: 36%
+    right: 4%
+    z-index: 1000
+    font-size: 12px
+    text-align: center
+    line-height: 25px
+    color: $grayDark_2
+
+  ul li img
+    margin: 1% 0 1% 2%
+    max-height: 80%
+
+  .newEntity
+    background: $skyBlueDarken
+    font-size: 1.5em
+    color: $white
+    border: none
+    line-height: 50px
+    width: 100%
+    display: block
+    position: absolute
+    bottom: 88px
+
+.log
+  display: block
+  background: $grayDark_2 !important
+  width: 100%
+  text-align: left
+  color: $white
+  font-size: 18px
+  font-weight: 100
+  height: 88px
+  line-height: 89px
+  position: absolute
+  bottom: 0
+  border: none
+  z-index: 4000
+
+  .icon-logOut
+    font-size: 30px
+    display: block
+    float: left
+    padding: 31px 0 0 16px
+    width: 43px
+
+.boxModal
+  max-width: 320px
+  width: 100%
+  background: white
+  padding: 0 0 3% 0
+  height: 200px
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-left: -160px
+  margin-top: -100px
+  opacity: 1 !important
+
+  h2
+    color: $white
+    font-size: 1.3em
+    text-align: center
+    background: $grayDark_2
+    height: 60px
+    line-height: 60px
+    font-weight: normal
+    margin-top: 0px
+
+  p
+    color: $grayDark_2
+    text-align: center
+    width: 80%
+    margin: 0 auto
+    padding: 3% 0 11% 0
+
+  ul
+    overflow: hidden
+    width: 75%
+    padding: 8% 0 11% 0
+    margin: 0 auto
+    padding: 2% 0 2% 0
+
+    li
+      float: left
+      margin: 0 20px 0 0
+
+  button
+    color: $white
+    border: none
+    text-align: center
+    display: block
+    width: 100px
+    line-height: 30px
+    font-size: 18px
+
+  .okBtn, .yesBtn
+    background: $red-1
+    margin: 0 auto
+
+  .noBtn
+    background: $grayDark_2
+
+.productNav
+  background: #b6b7b8
+  height: 55px
+  border-bottom: 1px solid $grayLight_6
+  z-index: 2
+  max-width: 640px
+  position: fixed
+  width: 100%
+
+  ul
+    margin: 0
+    padding: 0
+    overflow: hidden
+    height: 100%
+
+  li
+    float: left
+    width: 50%
+
+.productsMain
+  padding-top: 0 !important
+
+.productNav
+
+  li
+
+    button
+      border: none
+      width: 100%
+      background: none
+      text-align: left
+      text-indent: 11px
+      line-height: 55px
+      font-size: 1.3em
+      color: $white
+
+    &.active button
+      background: $white
+      color: $skyBlueDarken
+      text-align: center
+
+  .icon-myAlerts
+    font-size: 50px
+    display: block
+    float: left
+
+    .path1:before
+      content: "\e60b"
+      color: $skyBlueDarken
+
+.products, .serviceList
+  position: fixed !important
+  top: 150px !important
+  left: 0px
+  right: 0px
+  bottom: 10px
+  overflow-y: auto
+
+.products, .services
+  width: 100%
+
+.products ul, .services ul
+  margin: 0
+  padding: 0
+  margin-top: 0
+
+.products ul li.active, .services ul li.active
+  background: $grayLight_5
+
+.products ul li, .services ul li
+  border-bottom: 1px solid $grayLight_6
+  width: 100%
+  min-height: 60px
+  height: 100%
+  position: relative
+  overflow: hidden
+
+.products ul li button, .services ul li button
+  border: none
+  background: none
+  color: $skyBlueDarken
+  font-size: 1.2em
+  display: inline-block
+  line-height: 60px
+
+.products ul li button .icon-arrow, .services ul li button .icon-arrow
+  position: absolute
+  right: 1%
+  top: 12%
+  margin-top: 10px
+
+.products ul li button .icon-arrow .path1:before, .services ul li button .icon-arrow .path1:before
+  content: "\f105"
+  color: $skyBlueDarken
+  font-family: 'FontAwesome'
+  font-weight: normal
+  font-size: 22px
+
+.products .onoffswitch, .services .onoffswitch
+  float: right
+  width: 70px
+  margin: 15px 10px 0 0
+
+.products
+
+  h3
+    color: $skyBlueDarken
+    font-size: 1.1em
+    float: left
+    width: 76%
+    padding: 0 0 0 3%
+
+  .dropdownBox
+    width: 94.1%
+    overflow: hidden
+    background: white
+    padding: 0 3% 0 3%
+    display: none
+
+    p
+      color: $grayDark_5
+
+.editOption
+
+  ul
+    padding: 0 0 5% 0
+    width: 88%
+    margin: 0 auto
+
+  li
+    background: $grayLight_5
+    min-height: 40px !important
+    border-bottom: none !important
+    margin: 0 0 3% 0
+
+    h4
+      float: left
+      width: 35%
+      text-align: right
+      color: $grayDark_5
+      line-height: 59px
+      margin: 0
+      padding: 0
+
+    input
+      float: left
+      width: 30%
+      padding: 0
+      margin: 0 0 0 12%
+      background: $grayLight_5
+      color: $skyBlueDarken
+      text-align: left
+      font-weight: bold
+      float: left
+      width: 30%
+      padding: 0
+      margin: 10px 10px 0 12%
+      background: $grayLight_5
+      color: $skyBlueDarken
+      text-align: left
+      font-weight: bold
+      border: 0px
+
+    select
+      float: left
+      padding: 0
+      margin: 18px 10px 0 12%
+      background: $grayLight_5
+      color: $skyBlueDarken
+      text-align: left
+      font-weight: bold
+      border: 0px
+
+    .icon-pencil
+      display: block
+      position: absolute
+      right: 20px
+      top: 20px
+      cursor: pointer
+
+/* ==========================================================================
+ *Desktop styles Aprriz app
+ * ==========================================================================
+
+
+img.bankLogo
+  position: absolute
+  top: 50%
+  margin: -20px auto auto
+  max-height: 80px !important
+  max-width: calc(100% - 100px) !important
+
+.bankLogo img
+  max-height: 80px
+
+.menu-main
+  position: absolute !important
+  right: 10px
+  top: 10px
+  width: 51px
+
+h4.user
+  text-overflow: ellipsis !important
+  white-space: nowrap
+  width: 45% !important
+
+.welcome
+  margin-top: 10px !important
+
+.noselect
+  -webkit-touch-callout: none
+  @include prefixer(user-select, none, (webkit, khtml, moz, ms, spec)) 
+
+.page-content, header
+  display: none
+
+.page-content.active, header.active
+  display: block !important
+
+.Msg_info
+  // s
+
+.details_
+  background: none repeat scroll 0% 0% $grayLight_3
+  margin-top: 92px
+  padding: 2%
+  text-align: justify
+  height: 80px
+  h3
+    padding: 5px
+    font-size: 1em
+    max-height: 3.6em
+
+.detail_fixed
+  position: fixed
+  background-color: $white
+  border-bottom: 1px
+  .dateBank
+    bottom: -10px !important
+    left: 3em !important
+    left: 3em !important
+    position: relative !important
+
+#MessageDetail
+  height: 100%
+
+.noMessages
+  color: $grayDark_2
+  font-size: 1.17em
+  text-align: center
+
+.appends
+  position: absolute
+  top: 235px
+  left: 5px
+  right: 5px
+  bottom: 75px
+  overflow-y: auto
+  z-index: 5
+
+.historye
+  position: absolute
+  top: 235px
+  left: 5px
+  right: 5px
+  bottom: 70px
+  overflow-y: auto
+  z-index: 5
+  display: none
+  background: white
+
+.wraperWindows
+  position: absolute
+  left: 0px
+  bottom: 20px
+  right: 0px
+  top: 0px
+  overflow: hidden
+  z-index: 4
+
+#divPIN
+  position: fixed
+  top: 91px
+  left: 0px
+  right: 0px
+  bottom: 0px
+  background: $blueLight
+
+  h2
+    color: $grayDark_7
+    text-align: center
+
+.passkey
+  position: relative
+  top: 30px
+  border-bottom: 3px solid rgb(137, 137, 137)
+  width: 20%
+  margin-left: 4%
+  height: 20px
+  text-align: center
+  padding-bottom: 10px
+  float: left
+  color: $black !important
+
+.numKey, .delKey
+  position: relative
+  top: calc(100% - 300px)
+  background: white
+  width: 33%
+  height: 50px
+  float: left
+  text-align: center
+  display: table-cell
+  vertical-align: middle
+  margin-top: 2px
+  font-size: 20px
+  padding-top: 2px
+
+.numKey.center
+  margin-left: 0.5%
+  margin-right: 0.5%
+
+#categories .unread .centralLI
+  background: none repeat scroll 0% 0% rgb(249, 252, 229)
+  bottom: -7px
+  top: -4px
+  padding-top: 4px
+
+input
+  &.toggle
+    max-height: 0
+    max-width: 0
+    opacity: 0
+
+    + label
+      display: block
+      position: relative
+      box-shadow: inset 0 0 0px 1px $grayLight_3
+      height: 30px
+      width: 50px
+      border-radius: 15px
+      position: absolute
+      top: 0px
+      right: 5px
+
+      &:before
+        content: ""
+        position: absolute
+        display: block
+        height: 30px
+        width: 30px
+        top: 0px
+        right: 0px
+        border-radius: 15px
+        background: rgba(19, 191, 17, 0)
+        @include prefixer(transition, .25s ease-in-out, (moz, webkit, spec)) 
+
+      &:after
+        content: ""
+        position: absolute
+        display: block
+        height: 30px
+        width: 30px
+        top: 0px
+        right: 25px
+        border-radius: 15px
+        background: white
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2)
+        @include prefixer(transition, .25s ease-in-out, (moz, webkit, spec)) 
+        
+    &:checked + label
+
+      &:before
+        width: 50px
+        background: $skyBlueDarken
+
+      &:after
+        right: 0px
+
+  &.toggleSetting
+    max-height: 0
+    max-width: 0
+    opacity: 0
+
+    + label
+      display: block
+      position: relative
+      box-shadow: inset 0 0 0px 1px $grayLight_3
+      height: 35px
+      width: 60px
+      border-radius: 15px
+      position: absolute
+      top: 0px
+      right: 5px
+
+      &:before
+        content: ""
+        position: absolute
+        display: block
+        height: 35px
+        width: 40px
+        top: 0px
+        right: 0px
+        border-radius: 15px
+        background: rgba(19, 191, 17, 0)
+        -moz-transition: .25s ease-in-out
+        -webkit-transition: .25s ease-in-out
+        transition: .25s ease-in-out
+      &:after
+        content: ""
+        position: absolute
+        display: block
+        height: 35px
+        width: 40px
+        top: 0px
+        right: 25px
+        border-radius: 15px
+        background: white
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2)
+        @include prefixer(transition, .25s ease-in-out, (moz, webkit, spec)) 
+        
+    &:checked + label
+
+      &:before
+        width: 60px
+        background: $red-1
+
+      &:after
+        right: 0px
+
+.dotDone
+  color: $greenLemon
+
+.dotProgress
+  color: $yellow
+
+.dotError
+  color: $orangeRedish
+
+.dotNone
+  color: $grayLight_9
+
+#colorHandle
+  display: none
+  color: $skyBlueDarken
+
+.refreshing_list
+  text-align: center
+  font-size: 48px
+
+#ads2
+  display: none
+
+#Waiting
+  position: absolute
+  top: 0px
+  left: 0px
+  right: 0px
+  bottom: 0px
+  background: $white
+  z-index: 999999
+
+.wConteiner
+  width: 100%
+  height: 102%
+  background: url($logo) no-repeat center center
+  background-size: 90%
+  z-index: 9999999999
+  
+  div
+    position: absolute
+    bottom: 35px
+    text-align: center
+    left: 10px
+    right: 10px
+    color: $red-1
+    font-size: 16px
+
+    p
+      display: none
+
+div#login
+  z-index: 9999999999
+  vertical-align: middle
+  display: table-cell
+  height: 100%
+
+#mainw
+  vertical-align: middle
+  display: table-cell
+  height: 100%
+  width: 100%
+
+.out
+  position: absolute
+  left: 8px
+  top: 6px
+  font-size: 42px
+  color: $white
+  visibility: hidden
+
+.htmlMSG
+  overflow-y: auto
+  position: absolute
+  top: 100px
+  bottom: 80px
+  left: 0px
+  right: 0px
+  overflow-x: hide
+  z-index: 999
+
+.magicalArrow
+  display: table-cell
+  height: 80px
+  font-size: 32px
+  vertical-align: middle
+  color: $green
+  width: 40px
+  text-align: right
+
+.px5
+  margin-top: -5px
+
+.MsG
+  position: relative
+  margin-top: 3px
+
+#headerEntity
+  // 
+.scrollingArrow
+  width: 100%
+  text-align: center
+  display: none
+
+div.products li span.arrow
+  margin-top: -10px
+
+/*CANGES MADE BY HERNAN CASTRO PANIAGUA 2016-10-19
+
+.contentPage
+  width: 94%
+  padding: 3% 3%
+  margin-top: 100px
+  position: absolute
+  bottom: 10px
+  top: 0px
+
+  h1
+    color: $grayDark_2
+    text-align: center
+    width: 80%
+    margin: 0 auto
+    padding: 4% 0 4% 0
+
+  h2
+    font-weight: normal
+    color: #636466
+    font-size: 1.2em
+
+  .service  
+
+    .btnAction
+      width: 100%
+
+      .icon-arrow
+
+        i
+          font-size: 30px
+          transform: translateY(-50%)
+          position: absolute
+          top: 52%
+          right: 17px
+          color: $white
+
+    .box
+      display: block
+      margin-bottom: 15px
+      padding-left: 5px
+      padding-right: 5px
+    
+      .optionSelectCheck
+        width: 100%
+        overflow: hidden
+        position: relative
+        padding-top: 5px
+        padding-bottom: 5px
+
+        h3
+          float: left
+          margin-top: 10px
+          margin-bottom: 10px
+          max-width: 75%
+
+        .onoffswitch
+          float: right
+          max-width: 25%
+          transform: translateY(-50%)
+          position: absolute
+          top: 50%
+          right: 0
+          height: 40px
+
+  .btnFull
+    margin-top: 25px
+
