@@ -8,7 +8,7 @@
   "Forgot my password" : "Olvidé mi contraseña",
   "Do you want to save the changes?" : "¿Desea guardar los cambios realizados?",
   "Save changes" : "Guardar cambios",
-  "Welcome"	:"Bienvenido",
+  "Welcome" :"Bienvenido",
   "Push Center" : "PN",
   "Log Out" : "Salir",
   "New Entity" : "Nueva Entidad",
@@ -76,5 +76,16 @@
   "Unsuscribe Confirmation" : "Confirmación Desinscripción",
   "Are you sure that you want to unsuscribe to" : "Esta seguro que desea desincribirse de",
   "You need to select a retention policy":"Seleccione un periodo de rentención",
-  "This message contains rich content" : "Este mensaje contiene contenido enriquesido"
+  "This message contains rich content" : "Este mensaje contiene contenido enriquesido",
+  "Change contact data" : "Cambiar datos de contacto",
+  "Movil phone" : "Teléfono móvil",
+  "Select notification channels" : "Seleccionar canales de notificación",
+  "Push notifications" : "Notificaciones en el dispositivo",
+  "SMS" : "Mensajes de texto",
+  "Personal data" : "Datos personales",
+  "Preferences" : "Preferencias",
+  "My Alerts": "Mis Alertas",
+  "Fraud Warnings": "Alertas de Fraude",
+  "Notifications": "Notificaciones",
+  "Promotions": "Promociones"
 }

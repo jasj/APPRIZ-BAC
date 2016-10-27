@@ -1,0 +1,131 @@
+#appHolder
+  width: 100%
+  margin: 0 auto
+  background: $white
+  height: 100%
+  display: none
+
+header
+  background: $white
+  background: -moz-linear-gradient(left, $white 17%, $white 17%, $grayDark_2 17%)
+  background: -webkit-gradient(linear, left top, right top, color-stop(17%, $white), color-stop(17%, $white), color-stop(17%, $grayDark_2))
+  background: -webkit-linear-gradient(left, $white 17%, $white 17%, $grayDark_2 17%)
+  background: -o-linear-gradient(left, $white 17%, $white 17%, $grayDark_2 17%)
+  background: -ms-linear-gradient(left, $white 17%, $white 17%, $grayDark_2 17%)
+  background: linear-gradient(to right, $red-1 17%, $white 17%, $grayDark_2 17%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$white}', endColorstr='#{$grayDark_2}', GradientType=1)
+  height: 92px
+  position: fixed
+  width: 100%
+  z-index: 2000
+  top: 0
+  left: 0
+  right: 0
+  border-bottom: 2px solid $grayMedium
+
+  &.loginHead
+    background: $red-1
+    background: -moz-linear-gradient(left, $red-1 17%, $red-1 17%, $grayDark_2 17%)
+    background: -webkit-gradient(linear, left top, right top, color-stop(17%, $red-1), color-stop(17%, $red-1), color-stop(17%, $grayDark_2))
+    background: -webkit-linear-gradient(left, $red-1 17%, $red-1 17%, $grayDark_2 17%)
+    background: -o-linear-gradient(left, $red-1 17%, $red-1 17%, $grayDark_2 17%)
+    background: -ms-linear-gradient(left, $red-1 17%, $red-1 17%, $grayDark_2 17%)
+    background: linear-gradient(to right, $red-1 17%, $red-1 17%, $grayDark_2 17%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$red-1}', endColorstr='#{$grayDark_2}', GradientType=1)
+    height: 92px
+  
+  .icon-back
+    display: block
+    color: $red-1
+    font-size: 30px
+    width: 17%
+    float: left
+    text-align: center
+    line-height: 91px
+  h2
+    color: $white
+    font-size: 1.6em
+    float: left
+    width: 72%
+    text-align: center
+    margin: 0
+    line-height: 84px
+  .icon-menu
+    border: none
+    color: $white
+    font-size: 51px
+    background: none
+    line-height: 76px
+    display: block
+
+.bankSection .icon-menu
+  border: none
+  color: $red-1
+  font-size: 32PX
+  background: none
+  line-height: 76px
+  display: block
+  margin-top: 11px
+
+#headerMain .icon-menu
+  margin-top: 5px !important
+
+.imglogo
+  max-height: 80px !important
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.login
+  width: 90%
+  margin-left: 5%
+
+.resetPass
+  width: 90%
+  height: 100%
+  margin-top: 60%
+  margin-left: 5%
+
+.login .logo
+  display: block
+  padding: 16% 0 10% 0
+  width: 100%
+  margin: 0 auto
+  max-width: 570px
+
+.loginBox
+  max-width: 590px
+  margin: 0 auto
+  padding: 0 0 6% 0
+  overflow: hidden
+  .row
+    position: relative
+
+#main
+  overflow: hidden
+  max-width: 640px
+  margin: 91px auto 0
+
+.allCategory
+  margin: 110px auto 176px !important
+
+.loginBox
+  input
+    background: $grayLight_2
+    border: none
+    height: 70px
+    margin: 0 0 5% 0
+    display: block
+    width: 100%
+    color: $grayBluish
+    font-size: 1.1em
+    padding: 0 2% 0 2%
+  .icon-user
+    color: $grayBluish
+    position: absolute
+    right: 13px
+    z-index: 1000
+    top: 23px
+    font-size: 25px

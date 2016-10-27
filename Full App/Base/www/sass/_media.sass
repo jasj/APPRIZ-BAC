@@ -1,0 +1,459 @@
+@media print
+  *
+    background: transparent !important
+    color: $black !important
+    
+    box-shadow: none !important
+    text-shadow: none !important
+  a
+    text-decoration: underline
+    &:visited
+      text-decoration: underline
+    &[href]:after
+      content: " (" attr(href) ")"
+  abbr[title]:after
+    content: " (" attr(title) ")"
+  
+  .ir a:after
+    content: ""
+  a
+    &[href^="javascript:"]:after, &[href^="#"]:after
+      content: ""
+
+  pre, blockquote
+    border: 1px solid $grayLight_4
+    page-break-inside: avoid
+
+  thead
+    display: table-header-group
+  
+  tr
+    page-break-inside: avoid
+  img
+    page-break-inside: avoid
+    max-width: 100% !important
+    
+  @page
+    margin: 0.5cm
+
+  p, h2, h3
+    orphans: 3
+    widows: 3
+  h2, h3
+    page-break-after: avoid
+
+@media (min-width: 1025px)
+  .allMenu
+    width: 40% !important
+
+@media (max-width: 1024px)
+  #main
+    max-width: 100%
+
+  #ads2
+    max-width: 100%
+
+    img
+      width: 100%
+
+  .allCategory
+    margin: 110px auto 240px !important
+
+@media (max-width: 801px)
+  .allCategory
+    margin: 110px auto 231px !important
+
+@media (max-width: 769px)
+  .allMenu
+    width: 80%
+
+  .allCategory
+    margin: 110px auto 183px !important
+
+  input
+    line-height: 44px
+    width: 96%
+    margin-bottom: 4%
+
+  .btnAction
+    line-height: 44px
+    width: 96%
+    margin-bottom: 4%
+
+    .icon-arrow
+      font-size: 51px
+      margin: 1px 0 0 0
+
+  .settings
+    width: 88%
+    padding: 3%
+    margin-top: 100px
+    position: absolute
+    bottom: 10px
+    top: 0px
+
+  .pinEnter
+    width: 100% !important
+    padding: 0 !important
+
+  .bankSection h2 a
+    width: 77%
+
+  .products ul li button
+    padding: 0 0 0 3%
+
+@media (max-width: 605px)
+  .bubble
+    top: 0
+    left: 50%
+
+  #entities .bubble2
+    right: 4%
+    top: 23%
+
+  header h2
+    color: $white
+    float: left
+    width: 66%
+    text-align: center
+    margin: 0
+    line-height: 84px
+
+  .allCategory
+    margin: 110px auto 187px !important
+
+  .mainBankSection h2
+    width: 83%
+
+@media (max-width: 481px)
+  .newUserlink
+    font-size: 18px
+    width: 100%
+    line-height: 50px
+    text-align: center
+
+  #categories li .iconCat
+    width: 70px
+    padding: 0 0 0 15px
+
+  #entities ul li img
+    max-width: 76%
+
+  nav.categoryNav
+    width: 98%
+    padding: 2%
+
+  .allCategory
+    margin: 110px auto 131px !important
+
+  nav.categoryNav .icon-myAlerts
+    font-size: 31px
+
+  .topHeader .userInfo
+
+    .icon-user
+      font-size: 27px
+      display: inline-block
+      padding: 11px 0 0 0
+      float: left
+
+    .user
+      font-size: 14px
+
+  .bankSection h2 a
+    display: block
+    float: left
+    width: 94%
+    padding: 13px 0 0 5px
+
+  header h2
+    width: 65%
+    font-size: 1.4em
+
+  .settings h1
+    width: 84%
+    padding: 5% 0 6% 0
+    font-size: 1.5em
+
+  .loginBox
+
+    input
+      width: 95%
+      height: 55px
+      font-size: 18px
+      line-height: 60px
+
+    .icon-user
+      top: 15px
+
+  .icon-lock
+    top: 15px
+
+  .submitLogin
+    margin: 7% 0 0 0
+    width: 99%
+
+  .mainBankSection h2
+    width: 75%
+    padding: 0 0 0 3%
+
+    a
+      width: 100%
+
+  #categories li .icon-myAlerts, .icon-notifications, .icon-alerts, .icon-promotions, .icon-services
+    font-size: 32px
+
+  #categories li
+    padding: 2% 0 2% 0
+
+  .options .optionBtn
+    font-size: 26px
+    position: absolute
+    bottom: 0px
+    left: 5px
+    right: 5px
+
+  .dropdownOption
+    width: 88%
+    position: absolute
+    bottom: 50px
+    left: 6%
+
+  #categories li p
+    color: $grayMedium_3
+    font-size: 16px
+    margin: 0
+
+  .loginBox
+    width: 90%
+
+  .login .logo
+    display: block
+    padding: 16% 0 10% 0
+    width: 85%
+    margin: 0 auto
+
+  .contentMenu ul li
+    min-height: 70px
+
+  .productNav
+
+    .icon-myAlerts, .icon-services
+      font-size: 37px
+      display: block
+      float: left
+      margin: 10px 0 0 0
+
+  .products h3
+    width: 71%
+
+  .weeksOption li
+    list-style: none
+    float: left
+    background: $grayLight_2
+    margin: 0 5% 5% 2%
+    padding: 1%
+    width: 41%
+
+  #categories li p
+    width: 95%
+
+  nav.categoryNav ul
+    padding: 0 0 0 3%
+
+  .contentPage 
+
+    h1 
+      width: 84%
+      padding: 5% 0 6% 0
+      font-size: 1.5em
+
+    h3
+      color: $grayDark_2
+      font-weight: 300
+
+@media (max-width: 320px)
+  .newUserlink
+    font-size: 20px
+
+  .boxModal
+    left: 59%
+
+  header .icon-back
+    width: 11%
+
+  #entities .newEntity
+    font-size: 1.2em
+    height: 50px
+    line-height: 50px
+    bottom: 10%
+
+  .topHeader .bankBrand
+    float: left
+    width: 45%
+    padding: 29px 0 0 0
+
+  .bankSection .icon-menu
+    font-size: 32px
+    line-height: 91px
+
+  .topHeader .bankBrand a
+    display: block
+
+  #categories li .icon-myAlerts, .icon-notifications, .icon-alerts, .icon-promotions, .icon-services
+    font-size: 32px
+
+  .contentMenu ul li button
+    min-height: 50px
+
+  .editOption li h4
+    float: left
+    width: 35%
+    text-align: right
+    color: $grayDark_5
+    font-size: 20px
+    line-height: 26px
+    margin: 0
+    padding: 5px 0 0
+
+  .contentMenu ul li
+    min-height: 50px
+
+  .login .logo
+    width: 82%
+
+  .loginBox
+  
+    input
+      width: 95%
+
+    .icon-user
+      right: 24px
+
+  .icon-lock
+    right: 24px
+
+  #categories li .icon-arrow
+
+    .path2:before, .path1:before
+      font-size: 35px
+
+  .topHeader .userInfo
+    width: 55%
+    overflow: hidden
+
+    .user
+      font-size: 12px
+      margin: 6px 0 0 0
+      padding: 0
+      line-height: 17px
+    
+    .icon-user
+      font-size: 18px
+      display: inline-block
+      padding: 0
+      float: left
+      margin: 0 0 0 11px
+
+    .welcome
+      font-weight: 100
+      font-size: 13px
+      margin: 0
+      padding: 0
+
+  .log
+    font-size: 18px !important
+    height: 60px
+    line-height: 60px
+
+    .icon-logOut
+      padding: 16px 0 0 10px
+
+  .boxModal
+    max-width: 250px
+
+    button
+      width: 72px !important
+
+    h2
+      font-size: 20px
+
+    p
+      font-size: 14px
+
+    button
+      color: $white
+      border: none
+      text-align: center
+      display: block
+      width: 100px
+      line-height: 25px
+      font-size: 15px
+
+  .products ul li button .icon-arrow
+    position: absolute
+    right: 4%
+    top: 24%
+    font-size: 40px
+    margin-top: -20px
+
+  header h2
+    line-height: 66px
+    padding: 10px 0 0 0
+    font-size: 1.1em
+
+  .products ul li button
+    font-size: 21px
+
+  .productNav
+
+    li button
+      line-height: 55px
+      font-size: 1em
+
+    .icon-myAlerts, .icon-services
+      font-size: 36px
+      margin: 5px 0 0 0
+
+  .products
+
+    h3
+      font-size: 1em
+      width: 68%
+
+    .dropdownBox
+      width: 100%
+      padding: 0
+
+      p
+        font-size: 0.9em
+        padding: 3%
+
+  .editOption li h4
+    float: left
+    width: 43%
+    text-align: right
+    color: $grayDark_5
+    font-size: 16px
+    line-height: 58px
+    margin: 0
+    padding: 0
+
+  .allCategory
+    // dd
+
+  .allMenu
+    width: 80%
+
+  .contentMenu ul li button .icon1
+    font-size: 30px
+
+  .settings h1
+    font-size: 1.2em
+
+  .subscribebox h2
+    font-size: 1.1em
+
+  .bankSection h2
+    width: 68%
+    padding: 10px 0 0 10px

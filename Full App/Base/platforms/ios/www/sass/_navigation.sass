@@ -1,0 +1,46 @@
+nav.categoryNav
+  background: $grayLight_8
+  width: 100%
+  padding: 1%
+  @include prefixer(user-select, none, (webkit, ms, khtml, moz, o, spec) ) 
+
+  ul
+    padding: 0 0 0 10%
+    overflow: hidden
+    margin: 0
+
+    li
+      position: relative
+      border-bottom: none
+      float: left
+      width: 20%
+
+      a
+        display: block
+
+  span
+    content: "\e60b"
+    color: $grayLight_3
+
+    &.active
+      content: "\e60b"
+      color: $skyBlueDarken
+      
+  .icon-myAlerts
+    font-size: 40px
+
+    .path1:before
+      content: "\e60b"
+      color: $grayLight_3
+
+    &.active .path1:before
+      content: "\e60b"
+      color: $skyBlueDarken
+
+    .path2:before
+      content: "\e60c"
+      margin-left: -1em
+      color: $grayDark_6
+
+    &.active .path2:before
+      color: $orange

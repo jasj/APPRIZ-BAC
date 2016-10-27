@@ -1,4 +1,7 @@
-
+var debug = true;
+if( debug ) { 
+	$(".wConteiner div p").show()
+}
 function onDeviceReady(){
 	
 	try{
